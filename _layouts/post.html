@@ -5,7 +5,8 @@ layout: default
     <div class="row">
         <div class="col-12">
           {% assign key = page.categories[0] %}
-          <a href="/category/{{ page.categories[0] }}" class="btn-back">{{ site.data.categories[ key ] }}</a>
+          {% assign url = '/category/' | append: page.categories[0] %}
+          <a href="{{ url | absolute_url }}" class="btn-back">{{ site.data.categories[ key ] }}</a>
           <h2>{{ page.title }}</h2>
           {{ content }}
           {% include already-tried-this.html %}

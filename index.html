@@ -12,7 +12,7 @@ layout: default
   </div>
 </div>
 
-<script src="/js/lunr.js"></script>
+<script src="{{ "/js/lunr.js" | absolute_url }}"></script>
 <script>
 
   window.posts = [
@@ -21,7 +21,7 @@ layout: default
       {
         title: `{{ post.title }}`,
         content: `{{ post.content }}`,
-        url: `{{ post.url }}`,
+        url: `{{ post.url | absolute_url }}`,
         popular: {{ post.popular }},
       },
 
@@ -29,3 +29,4 @@ layout: default
   ];
 
 </script>
+<script src="{{ "/js/search.js" | absolute_url }}"></script>

@@ -1,13 +1,23 @@
 <div class="component">
   <h2>Browse by category</h2>
   <ul class="grid">
-    <li class="grid__item"><a href="/category/subscriptions">
+    <li class="grid__item"><a href="{{ "/category/subscriptions" | absolute_url }}">
       <span class="grid__item-content">Subscriptions & purchases</span>
     </a></li>
-    <li class="grid__item"><a href="/category/accountmanagement">Account management</a></li>
-    <li class="grid__item"><a href="/category/magazinecontent">Magazine content</a></li>
-    <li class="grid__item"><a href="/category/promotions">Promotions & offers</a></li>
-    <li class="grid__item"><a href="/category/mydevice">My device</a></li>
-    <li class="grid__item"><a href="/feedback">Leave feedback</a></li>
+    <li class="grid__item"><a href="{{ "/category/accountmanagement" | absolute_url }}">
+      <span class="grid__item-content">Account management</span>
+    </a></li>
+    <li class="grid__item"><a href="{{ "/category/magazinecontent" | absolute_url }} ">
+      <span class="grid__item-content">Magazine content</span>
+    </a></li>
+    <li class="grid__item"><a href="{{ "/category/promotions" | absolute_url }}">
+      <span class="grid__item-content">Promotions & offers</span>
+    </a></li>
+    <li class="grid__item"><a href="{{ "/category/mydevice" | absolute_url }}">
+      <span class="grid__item-content">My device</span>
+    </a></li>
+    <li class="grid__item"><a href="{{ "/feedback" | absolute_url }}">
+      <span class="grid__item-content">Leave feedback</span>
+    </a></li>
   </ul>
 </div>

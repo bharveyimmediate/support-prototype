@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absolute_url }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | absolute_url }}">
   </head>
   <body class="ios">
     {% include masthead.html %}
@@ -28,6 +28,5 @@
     }
 
     </script>
-    <script src="/js/search.js"></script>
   </body>
 </html>

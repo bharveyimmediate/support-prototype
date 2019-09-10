@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Problems with links and downloads?</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/style.css">
   </head>
   <body class="ios">
     <header id="masthead">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1><a href="/">Support</a></h1>
+        <h1><a href="http://localhost:4000/support-prototype/">Support</a></h1>
       </div>
     </div>
   </div>
@@ -23,7 +23,8 @@
     <div class="row">
         <div class="col-12">
           
-          <a href="/category/mydevice" class="btn-back">My device</a>
+          
+          <a href="http://localhost:4000/support-prototype/category/mydevice" class="btn-back">My device</a>
           <h2>Problems with links and downloads?</h2>
           <p>Double check you have an active internet connection on either Wi-Fi or 3G (data charges may apply). If you are confident that you have a good connection and links still don’t seem to work, try deleting/archiving the issue and downloading it again. If you are confident that you have a good connection and the issue still won’t download please report the problem (instructions at the top of this page).</p>
 
@@ -44,19 +45,18 @@
 
     <script>
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
 
     </script>
-    <script src="/js/search.js"></script>
   </body>
 </html>

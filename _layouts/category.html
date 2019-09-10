@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="container">
-  <a href="/" class="btn-back">Back</a>
+  <a href="{{ "/" | absolute_url }}" class="btn-back">Back</a>
   {{ content }}
 
   {% include category-anchor-links.html %}

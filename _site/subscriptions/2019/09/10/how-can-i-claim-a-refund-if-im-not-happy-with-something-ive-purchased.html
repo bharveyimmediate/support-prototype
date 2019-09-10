@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>How can I claim a refund if I'm not happy with something I've purchased?</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/style.css">
   </head>
   <body class="ios">
     <header id="masthead">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1><a href="/">Support</a></h1>
+        <h1><a href="http://localhost:4000/support-prototype/">Support</a></h1>
       </div>
     </div>
   </div>
@@ -23,7 +23,8 @@
     <div class="row">
         <div class="col-12">
           
-          <a href="/category/subscriptions" class="btn-back">Subscriptions & purchases</a>
+          
+          <a href="http://localhost:4000/support-prototype/category/subscriptions" class="btn-back">Subscriptions & purchases</a>
           <h2>How can I claim a refund if I'm not happy with something I've purchased?</h2>
           <p>If you’re not happy with one of our products we would really like to know about it. Please contact us using the Support form (instructions at the top of this page), we will try to either fix the problem or provide you with a satisfactory replacement. If you would still just prefer a refund we can provide advice on how to claim a refund from Apple.</p>
 
@@ -44,19 +45,18 @@
 
     <script>
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
 
     </script>
-    <script src="/js/search.js"></script>
   </body>
 </html>

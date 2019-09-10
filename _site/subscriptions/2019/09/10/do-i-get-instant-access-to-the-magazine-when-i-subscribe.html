@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Do I get instant access to the magazine when I subscribe?</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/style.css">
   </head>
   <body class="ios">
     <header id="masthead">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1><a href="/">Support</a></h1>
+        <h1><a href="http://localhost:4000/support-prototype/">Support</a></h1>
       </div>
     </div>
   </div>
@@ -23,7 +23,8 @@
     <div class="row">
         <div class="col-12">
           
-          <a href="/category/subscriptions" class="btn-back">Subscriptions & purchases</a>
+          
+          <a href="http://localhost:4000/support-prototype/category/subscriptions" class="btn-back">Subscriptions & purchases</a>
           <h2>Do I get instant access to the magazine when I subscribe?</h2>
           <p>Yes, you get instant access to the latest issue published at the time of purchase. However, if you purchased your subscription online from buysubscriptions.com it may take up to 24 hours for your subscription to become active.</p>
 
@@ -44,19 +45,18 @@
 
     <script>
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
 
     </script>
-    <script src="/js/search.js"></script>
   </body>
 </html>
