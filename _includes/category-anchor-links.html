@@ -1,0 +1,9 @@
+<ul>
+{% for category in site.categories %}
+  {% if category[0] == page.category %}
+    {% for post in category[1] %}
+      <li><a href="#post-{{ post.title | slugify }}">{{post.title}}</a></li>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+</ul>

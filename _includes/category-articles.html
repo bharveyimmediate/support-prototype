@@ -1,0 +1,12 @@
+{% for category in site.categories %}
+  {% if category[0] == page.category %}
+    {% for post in category[1] %}
+      <article id="post-{{ post.title | slugify }}" class="article-full">
+          <h3>{{ post.title }}</h3>
+          {{ post.content }}
+          {% include already-tried-this.html %}
+      </article>
+      <hr />
+    {% endfor %}
+  {% endif %}
+{% endfor %}

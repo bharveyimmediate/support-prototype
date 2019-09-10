@@ -1,0 +1,10 @@
+<div class="component">
+  <h2>Most asked questions</h2>
+  <ul>
+  {% for post in site.posts %}
+    {% if post.popular == true %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>

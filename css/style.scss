@@ -1,0 +1,37 @@
+---
+---
+
+$blue: #339BFA;
+
+@import "partials/forms";
+@import "partials/typography";
+
+@import "modules/grid";
+@import "modules/search";
+@import "modules/article";
+
+body {
+  font-size: 18px;
+}
+
+a {
+  color: $blue;
+}
+
+#masthead,
+.component {
+  margin-bottom: 30px;
+}
+
+#masthead {
+  margin-top: 20px;
+}
+
+.page-title {
+
+}
+
+.btn-back {
+  display: block;
+  margin-bottom: 1rem;
+}
