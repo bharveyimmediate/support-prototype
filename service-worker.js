@@ -3,6 +3,8 @@ var urlsToCache = [
   '/',
   '/css/bootstrap.min.css',
   '/css/style.css',
+  '/js/lunr.js',
+  '/js/search.js',
   '/category/subscriptions',
   '/category/accountmanagement',
   '/category/magazinecontent',
@@ -17,7 +19,6 @@ const install = function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
-        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
   );
