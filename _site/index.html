@@ -158,7 +158,7 @@
         title: `Why aren't the links to websites working?`,
         content: `<p>Check that you have an active internet connection (either Wi-Fi or 3G). If you’re certain that you’re online, please describe the location of the broken link (quote the text and page number) in an email to customer support (instructions at the top of this page).</p>
 `,
-        url: `http://localhost:4000/support-prototype/mydevice/2019/09/10/why-arent-the-links-to-websites-working.html`,
+        url: `http://localhost:4000/support-prototype/mydevice/2019/09/10/why-aren-t-the-links-to-websites-working.html`,
         popular: false,
       },
 
@@ -271,7 +271,7 @@
         title: `I have a print subscription. Can I transfer it?`,
         content: `<p>In most cases you can transfer a print subscription to digital. Please email customer support by following the instructions at the top of this page and provide your subscription number and account details.</p>
 `,
-        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-have-a-print-subscription.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-have-a-print-subscription-can-i-transfer-it.html`,
         popular: false,
       },
 
@@ -307,7 +307,7 @@
         title: `How can I claim a refund if I'm not happy with something I've purchased?`,
         content: `<p>If you’re not happy with one of our products we would really like to know about it. Please contact us using the Support form (instructions at the top of this page), we will try to either fix the problem or provide you with a satisfactory replacement. If you would still just prefer a refund we can provide advice on how to claim a refund from Apple.</p>
 `,
-        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/how-can-i-claim-a-refund-if-im-not-happy-with-something-ive-purchased.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/how-can-i-claim-a-refund-if-i-m-not-happy-with-something-i-ve-purchased.html`,
         popular: false,
       },
 
@@ -351,9 +351,11 @@
 
     <script>
 
+    const baseurl = '/support-prototype';
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
           // Registration was successful
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
