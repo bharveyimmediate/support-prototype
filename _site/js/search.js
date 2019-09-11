@@ -9,12 +9,13 @@ var Search = function() {
 
   this.form = this.component.querySelector('form');
   this.resultsContainer = this.component.querySelector('.search-results');
+  this.searchField = this.component.querySelector('input[name="query"]');
 
   // build the index
   this.idx = lunr(function () {
     this.ref('title');
     this.field('title');
-    this.field('content');
+    // this.field('content');
 
     window.posts.forEach(function (doc) {
       this.add(doc);
@@ -31,6 +32,15 @@ var Search = function() {
   };
 
   this.form.addEventListener('submit', handleSubmit);
+
+  // clear the results when the user types in the search field
+  this.searchField.addEventListener('keyup', event => {
+    console.log(event);
+
+    if (event.key !== 'Enter') {
+      this.clear();
+    }
+  });
 
   // clear the search results container and render the new results whenever a query is performed
   this.Events.bindEvent('resultsfetched', response => {

@@ -8,3 +8,12 @@
 .search-results {
   padding-top: 1rem;
 }
+
+input[type="text"] {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[name="query"]:focus {
+  border-bottom: 1px solid #000;
+}
