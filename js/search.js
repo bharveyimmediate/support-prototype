@@ -35,7 +35,6 @@ var Search = function() {
 
   // clear the results when the user types in the search field
   this.searchField.addEventListener('keyup', event => {
-    console.log(event);
 
     if (event.key !== 'Enter') {
       this.clear();
