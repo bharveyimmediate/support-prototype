@@ -14,7 +14,7 @@ var Search = function() {
   this.idx = lunr(function () {
     this.ref('title');
     this.field('title');
-    this.field('content');
+    // this.field('content');
 
     window.posts.forEach(function (doc) {
       this.add(doc);
