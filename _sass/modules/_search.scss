@@ -1,4 +1,5 @@
 .btn-search {
+  
 
     .col-md-2 & {
       width: 100%;
@@ -12,8 +13,4 @@
 input[type="text"] {
   outline: none;
   -webkit-appearance: none;
-}
-
-input[name="query"]:focus {
-  border-bottom: 1px solid #000;
 }

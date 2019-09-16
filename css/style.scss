@@ -3,12 +3,17 @@
 
 $blue: #339BFA;
 
+$width-tablet: 768px;
+
+@import "utils";
+
 @import "partials/forms";
 @import "partials/typography";
 
 @import "modules/grid";
 @import "modules/search";
 @import "modules/article";
+@import "modules/link-list";
 
 body {
   font-size: 18px;
@@ -37,5 +42,5 @@ a {
 }
 
 .btn {
-  border-radius: 18px;
+  // border-radius: 18px;
 }

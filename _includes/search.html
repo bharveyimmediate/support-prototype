@@ -1,14 +1,16 @@
 <div class="component component-search">
   <h2>Ask a question</h2>
-  <form>
-    <div class="row">
-      <div class="col-md-10">
-        <input type="text" class="form-control" name="query" />
+  <form method="GET" action="{{ "/search-results.html" | absolute_url }}">
+    <div class="row gutters-tablet-and-up">
+      <div class="col-md-10 col-10">
+        <input type="search" class="form-control" name="query" placeholder="e.g. how do I..." />
       </div>
-      <div class="col-md-2">
-        <button type="submit" class="btn btn-primary btn-search">Search</button>
+      <div class="col-md-2 col-2">
+        <button type="submit" class="btn btn-primary btn-search">
+          <i class="fa fa-search mobile-only" aria-hidden="true"></i>
+          <span class="tablet-and-up">Search</span>
+        </button>
       </div>
     </div>
   </form>
-  <div class="search-results"></div>
 </div>

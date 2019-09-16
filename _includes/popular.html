@@ -1,9 +1,9 @@
 <div class="component">
   <h2>Most asked questions</h2>
-  <ul>
+  <ul class="link-list">
   {% for post in site.posts %}
     {% if post.popular == true %}
-      <li><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></li>
+      <li class="link-list__item"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
   </ul>

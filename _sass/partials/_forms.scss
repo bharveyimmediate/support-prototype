@@ -1,7 +1,12 @@
 input[type=text] {
   border-radius: 0;
-  border-left: none;
-  border-top: none;
-  border-right: none;
   outline: none;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+input[type="search"] {
+  margin-bottom: 10px;
 }

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Search
+---
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <a href="{{ "/" | absolute_url }}" class="btn-back">Back</a>
+      <h2>Showing results for:</h2>
+
+      <div class="search-results">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ "/js/lunr.js" | absolute_url }}"></script>
+<script>
+
+  window.posts = [
+    {% for post in site.posts %}
+
+      {
+        title: `{{ post.title }}`,
+        content: `{{ post.content }}`,
+        url: `{{ post.url | absolute_url }}`,
+        popular: {{ post.popular }},
+      },
+
+    {% endfor %}
+  ];
+
+</script>
+<script src="{{ "/js/search.js" | absolute_url }}"></script>

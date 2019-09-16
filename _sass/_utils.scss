@@ -1,0 +1,29 @@
+.tablet-and-up {
+
+  @media screen and (max-width: $width-tablet - 1) {
+      display: none;
+  }
+}
+
+.mobile-only {
+
+  @media screen and (min-width: $width-tablet) {
+    display: none;
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.gutters-tablet-and-up {
+
+  @media screen and (max-width: $width-tablet - 1) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

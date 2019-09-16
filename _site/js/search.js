@@ -1,15 +1,8 @@
-var Search = function() {
+var Search = function(query) {
 
-  this.component = document.querySelector('.component-search');
-
-  // bail if the component isn't on the page
-  if (!this.component) {
-    return;
-  }
-
-  this.form = this.component.querySelector('form');
-  this.resultsContainer = this.component.querySelector('.search-results');
-  this.searchField = this.component.querySelector('input[name="query"]');
+  // this.form = this.component.querySelector('form');
+  this.resultsContainer = document.querySelector('.search-results');
+  // this.searchField = this.component.querySelector('input[name="query"]');
 
   // build the index
   this.idx = lunr(function () {
@@ -23,24 +16,23 @@ var Search = function() {
   });
 
   // bind the form submit event to a handler that submits the query
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const query = this.form.elements.query.value;
-
-    this.fetch(query);
-  };
-
-  this.form.addEventListener('submit', handleSubmit);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //
+  //   const query = this.form.elements.query.value;
+  //
+  //   this.fetch(query);
+  // };
+  //
+  // this.form.addEventListener('submit', handleSubmit);
 
   // clear the results when the user types in the search field
-  this.searchField.addEventListener('keyup', event => {
-    console.log(event);
-
-    if (event.key !== 'Enter') {
-      this.clear();
-    }
-  });
+  // this.searchField.addEventListener('keyup', event => {
+  //
+  //   if (event.key !== 'Enter') {
+  //     this.clear();
+  //   }
+  // });
 
   // clear the search results container and render the new results whenever a query is performed
   this.Events.bindEvent('resultsfetched', response => {
@@ -55,6 +47,8 @@ var Search = function() {
     'won\'t',
     'can\'t'
   ];
+
+  this.fetch(query);
 };
 
 Search.prototype.Events = {
@@ -109,4 +103,8 @@ Search.prototype.fetch = function(phrase) {
   this.Events.sendEvent('resultsfetched', results);
 };
 
-new Search();
+(function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('query');
+  new Search(query);
+})();
