@@ -22,8 +22,10 @@
 
 .gutters-tablet-and-up {
 
-  @media screen and (max-width: $width-tablet - 1) {
-    margin-left: 0;
-    margin-right: 0;
+  div[class*="col"] {
+    @media screen and (max-width: $width-tablet - 1) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }

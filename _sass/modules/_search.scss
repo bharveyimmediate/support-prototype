@@ -1,5 +1,5 @@
 .btn-search {
-  
+
 
     .col-md-2 & {
       width: 100%;
@@ -13,4 +13,20 @@
 input[type="text"] {
   outline: none;
   -webkit-appearance: none;
+}
+
+.col-query {
+  padding-right: 0;
+
+  @media screen and (min-width: $width-tablet) {
+    padding-right: 20px;
+  }
+}
+
+.col-submit {
+  padding-left: 0;
+
+  @media screen and (min-width: $width-tablet) {
+    padding-left: 20px;
+  }
 }
