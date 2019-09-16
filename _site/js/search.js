@@ -1,42 +1,21 @@
 var Search = function(query) {
 
-  // this.form = this.component.querySelector('form');
+  this.query = query;
+  this.title = document.querySelector('.search-query');
   this.resultsContainer = document.querySelector('.search-results');
-  // this.searchField = this.component.querySelector('input[name="query"]');
 
   // build the index
   this.idx = lunr(function () {
     this.ref('title');
     this.field('title');
-    // this.field('content');
 
     window.posts.forEach(function (doc) {
       this.add(doc);
     }, this);
   });
 
-  // bind the form submit event to a handler that submits the query
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //
-  //   const query = this.form.elements.query.value;
-  //
-  //   this.fetch(query);
-  // };
-  //
-  // this.form.addEventListener('submit', handleSubmit);
-
-  // clear the results when the user types in the search field
-  // this.searchField.addEventListener('keyup', event => {
-  //
-  //   if (event.key !== 'Enter') {
-  //     this.clear();
-  //   }
-  // });
-
   // clear the search results container and render the new results whenever a query is performed
   this.Events.bindEvent('resultsfetched', response => {
-    this.clear();
     this.render(response);
   });
 
@@ -60,11 +39,10 @@ Search.prototype.Events = {
   },
 };
 
-Search.prototype.clear = function() {
-  this.resultsContainer.innerHTML = '';
-};
-
 Search.prototype.render = function(data) {
+
+  // display the search query in the title
+  this.title.innerHTML = this.query;
 
   // render the number of results found
   this.resultsContainer.innerHTML += '<p class="search-results-count">' + data.length + ' results found</p>';
@@ -103,8 +81,6 @@ Search.prototype.fetch = function(phrase) {
   this.Events.sendEvent('resultsfetched', results);
 };
 
-(function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const query = urlParams.get('query');
-  new Search(query);
-})();
+const urlParams = new URLSearchParams(window.location.search);
+const query = urlParams.get('query');
+new Search(query);

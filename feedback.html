@@ -14,7 +14,7 @@ title: Feedback
         <strong>Please note:</strong> we are unable to reply to messages received through this form.
       </div>
 
-      <form>
+      <form method="GET" action="{{ "/feedback-success.html" | absolute_url }}">
         <div class="form-group">
           <label for="message">Message</label>
           <textarea name="message" class="form-control"></textarea>
