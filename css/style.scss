@@ -30,6 +30,17 @@ a {
 
 #masthead {
   margin-top: 20px;
+
+  .logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+
+    @media screen and (min-width: $width-tablet) {
+      width: 300px;
+    }
+  }
 }
 
 .page-title {

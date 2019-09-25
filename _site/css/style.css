@@ -56,6 +56,10 @@ a { color: #339BFA; }
 
 #masthead { margin-top: 20px; }
 
+#masthead .logo { display: block; width: 200px; height: auto; margin: 20px auto; }
+
+@media screen and (min-width: 768px) { #masthead .logo { width: 300px; } }
+
 .btn-back { display: block; margin-bottom: 1rem; }
 
 /*# sourceMappingURL=style.css.map */
