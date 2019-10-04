@@ -1,10 +1,13 @@
-<header id="masthead">
+<header class="masthead">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="{{ "/" | absolute_url }}"><img class="logo" src="{{ "/img/gardeners-world-logo.png" | absolute_url }}" width="600" height="240" /></a>
-        <h1><a href="{{ "/" | absolute_url }}">Support</a></h1>
+        <a href="{{ "/" | absolute_url }}"><img class="masthead__logo" src="{{ "/img/gardeners-world-logo.png" | absolute_url }}" width="600" height="240" /></a>
+        <h1 class="masthead__title"><a href="{{ "/" | absolute_url }}">Support</a></h1>
       </div>
     </div>
   </div>
+  <a href="{{ "/search.html" | absolute_url }}" class="masthead__search">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </a>
 </header>

@@ -8,6 +8,11 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+
+    &::after {
+      content: '';
+      flex: 0 0 30%;
+    }
   }
 
   &__item {

@@ -1,3 +1,15 @@
+form {
+  margin-bottom: 30px;
+
+  .container & {
+      width: 100%;
+  }
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
+
 input[type=text] {
   border-radius: 0;
   outline: none;
@@ -9,4 +21,8 @@ textarea {
 
 input[type="search"] {
   margin-bottom: 10px;
+}
+
+.required {
+  color: red;
 }

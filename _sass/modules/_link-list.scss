@@ -1,6 +1,12 @@
 .link-list {
+  padding-left: 0;
 
   &__item {
-    margin-bottom: 20px;
+    list-style: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 5px;
   }
 }

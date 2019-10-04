@@ -14,6 +14,8 @@ $width-tablet: 768px;
 @import "modules/search";
 @import "modules/article";
 @import "modules/link-list";
+@import "modules/footer";
+@import "modules/masthead";
 
 body {
   font-size: 18px;
@@ -23,24 +25,8 @@ a {
   color: $blue;
 }
 
-#masthead,
 .component {
   margin-bottom: 30px;
-}
-
-#masthead {
-  margin-top: 20px;
-
-  .logo {
-    display: block;
-    width: 200px;
-    height: auto;
-    margin: 20px auto;
-
-    @media screen and (min-width: $width-tablet) {
-      width: 300px;
-    }
-  }
 }
 
 .page-title {
