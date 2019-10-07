@@ -1,0 +1,6 @@
+.btn {
+
+  @media screen and (max-width: $width-tablet - 1) {
+    width: 100%;
+  }
+}

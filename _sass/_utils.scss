@@ -13,11 +13,17 @@
 }
 
 .align-left {
-  text-align: left;
+
+  @media screen and (min-width: $width-tablet) {
+    text-align: left;
+  }
 }
 
 .align-right {
-  text-align: right;
+
+  @media screen and (min-width: $width-tablet) {
+    text-align: right;
+  }
 }
 
 .gutters-tablet-and-up {
