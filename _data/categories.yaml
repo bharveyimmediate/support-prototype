@@ -1,5 +1,7 @@
-subscriptions: Subscriptions & purchases
-accountmanagement: Account management
-magazinecontent: Magazine content
-promotions: Promotions & offers
-mydevice: My device
+subscriptions: Subscriptions
+ownership: Ownership
+generalappusage: General app usage
+account: Account
+refunds: Refunds
+magazinecontent: Issue content
+other: Other

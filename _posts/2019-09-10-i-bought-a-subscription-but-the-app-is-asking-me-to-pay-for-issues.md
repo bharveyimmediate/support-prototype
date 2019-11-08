@@ -1,8 +1,9 @@
 ---
 layout: post
-title: How do I restore my previous purchases?
+title: I bought a subscription but the app is asking me to pay for my issue(s)
 popular: false
-categories: [ownership, subscriptions]
+categories: [subscriptions]
+popular: true
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 

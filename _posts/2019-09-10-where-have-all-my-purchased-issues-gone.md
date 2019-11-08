@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How do I restore my previous purchases?
+title: Where have all my purchased issues gone?
 popular: false
 categories: [ownership, subscriptions]
 ---

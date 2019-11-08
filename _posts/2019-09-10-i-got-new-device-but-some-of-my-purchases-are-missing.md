@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How do I restore my previous purchases?
+title: I got a new device but some of my purchases are missing
 popular: false
 categories: [ownership, subscriptions]
 ---

@@ -4,4 +4,4 @@ title: When my digital subscription expires, do I keep the issues?
 popular: false
 categories: [subscriptions]
 ---
-Yes. The issues will always belong to you, but in general they will be restricted to the platform (iOS/Android) on which you purchased them.
+Yes, you own the issues for as long as you hold the account with Apple and use the associated Apple ID

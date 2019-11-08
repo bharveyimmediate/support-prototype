@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How do I restore my previous purchases?
+title: I can see my issues on my iPad but not on my iPhone
 popular: false
 categories: [ownership, subscriptions]
 ---
