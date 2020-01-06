@@ -8,6 +8,8 @@
 
 @media screen and (max-width: 767px) { .gutters-tablet-and-up div[class*="col"] { margin-left: 0; margin-right: 0; } }
 
+.nojs .nojs-hide { display: none; }
+
 form { margin-bottom: 30px; }
 
 .container form { width: 100%; }
