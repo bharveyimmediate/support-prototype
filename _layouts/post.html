@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-          {% assign key = page.categories[0] %}
-          {% assign url = '/category/' | append: page.categories[0] %}
-          <p class="btn-back">Category: <a href="{{ url | absolute_url }}">{{ site.data.categories[ key ] }}</a></p>
-          <h2>{{ page.title }}</h2>
-          {{ content }}
-          {% include already-tried-this.html %}
-        </div>
-    </div>
+{% assign key = page.categories[0] %}
+{% assign url = '/category/' | append: page.categories[0] %}
+
+<p class="btn-back">Category: <a href="{{ url | absolute_url }}">{{ site.data.categories[ key ] }}</a></p>
+
+<h2>{{ page.title }}</h2>
+
+<div class="content">
+  {{ content }}
 </div>
+
+{% include already-tried-this.html %}

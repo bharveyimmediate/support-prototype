@@ -1,7 +1,8 @@
 ---
 ---
 
-$blue: #339BFA;
+$creme: #fffff6;
+$blue: #0354A0;
 
 $width-tablet: 768px;
 
@@ -11,6 +12,7 @@ $width-tablet: 768px;
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/tables";
+@import "partials/images";
 
 @import "modules/grid";
 @import "modules/search";
@@ -21,10 +23,6 @@ $width-tablet: 768px;
 
 body {
   font-size: 18px;
-}
-
-a {
-  color: $blue;
 }
 
 .component {

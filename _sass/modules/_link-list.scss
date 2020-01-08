@@ -1,12 +1,18 @@
 .link-list {
-  padding-left: 0;
 
   &__item {
-    list-style: none;
+
+    .hide-dots & {
+      list-style: none;
+    }
   }
 
   &__icon {
     display: inline-block;
     margin-right: 5px;
+  }
+
+  &.hide-dots {
+    padding-left: 0;
   }
 }
