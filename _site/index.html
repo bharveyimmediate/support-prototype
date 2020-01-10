@@ -13,8 +13,29 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="http://localhost:4000/support-prototype/"><img class="masthead__logo" src="http://localhost:4000/support-prototype/img/gardeners-world-logo.png" width="600" height="240" /></a>
-        <h1 class="masthead__title"><a href="http://localhost:4000/support-prototype/">App Support</a></h1>
+        <a href="http://localhost:4000/support-prototype/"><img src="http://localhost:4000/support-prototype/img/logo_blue.gif" width="326" height="166" class="masthead__logo"></a>
+        <div class="accessibility-controls simple-reveal align-right">
+  <button class="btn btn-outline-primary simple-reveal__btn"><i class="fa fa-cog"></i> Accessibility</button>
+  <button class="btn btn-outline-primary simple-reveal__btn-close"><i class="fa fa-times"></i> Close</button>
+  <div class="simple-reveal__content accessibility-controls__content">
+    <h3>Accessibility</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="theme-selector" class="accessibility-controls__label-text">Text/background colour</label>
+        </div>
+        <div class="col">
+          <select class="form-control accessibility-controls__theme-selector" id="theme-selector">
+            <option value="default">Default</option>
+            <option value="blackyellow">Black text & yellow background</option>
+            <option value="blackcreme">Black text & creme background</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -25,11 +46,12 @@
 
     <main>
       <div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="component">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="masthead__title">App Support</h1>
+            <div class="component">
   <h2>Most asked questions</h2>
-  <ul class="link-list">
+  <ul class="link-list hide-dots">
   
     
   
@@ -56,7 +78,7 @@
     
   
     
-      <li class="link-list__item"><a href="http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-forgot-my-password.html">I forgot my password</a></li>
+      <li class="link-list__item"><a href="http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-forgot-my-password.html"><i class="link-list__icon fa fa-question-circle"></i>I forgot my password</a></li>
     
   
     
@@ -66,7 +88,7 @@
     
   
     
-      <li class="link-list__item"><a href="http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-bought-a-subscription-but-the-app-is-asking-me-to-pay-for-issues.html">I bought a subscription but the app is asking me to pay for my issue(s)</a></li>
+      <li class="link-list__item"><a href="http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-bought-a-subscription-but-the-app-is-asking-me-to-pay-for-issues.html"><i class="link-list__icon fa fa-question-circle"></i>I bought a subscription but the app is asking me to pay for my issue(s)</a></li>
     
   
     
@@ -76,7 +98,7 @@
     
   
     
-      <li class="link-list__item"><a href="http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-do-i-get-the-cover-gift.html">How do I get the cover gift?</a></li>
+      <li class="link-list__item"><a href="http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-do-i-get-the-cover-gift.html"><i class="link-list__icon fa fa-question-circle"></i>How do I get the cover gift?</a></li>
     
   
     
@@ -96,7 +118,7 @@
   </ul>
 </div>
 
-      <div class="component component-search">
+<div class="component component-search">
   <h2>Ask a question</h2>
   <form method="GET" action="http://localhost:4000/support-prototype/search-results.html">
     <div class="row gutters-tablet-and-up">
@@ -113,7 +135,7 @@
   </form>
 </div>
 
-      <div class="component">
+<div class="component">
   <h2>I need help with...</h2>
   <ul class="grid">
     <li class="grid__item"><a href="http://localhost:4000/support-prototype/category/subscriptions">
@@ -137,10 +159,10 @@
   </ul>
 </div>
 
-    </div>
-  </div>
-</div>
 
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="site-footer">
   <div class="container">
@@ -158,21 +180,14 @@
 </footer>
 
 
+    <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>

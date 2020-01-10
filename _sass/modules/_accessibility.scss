@@ -1,0 +1,28 @@
+.accessibility-controls {
+  text-align: left;
+
+  .masthead & {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+
+  &__content {
+    background-color: $creme;
+    padding: 12px 15px;
+    width: 100vw;
+
+    @media screen and (min-width: 768px) {
+      width: 70vw;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__label-text {
+    white-space: nowrap;
+  }
+}

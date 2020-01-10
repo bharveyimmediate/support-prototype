@@ -1,0 +1,32 @@
+.simple-reveal {
+
+  &__btn {
+
+    .show & {
+      display: none;
+    }
+  }
+
+  &__btn-close {
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    .show & {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+
+    .show & {
+      display: block;
+    }
+
+    .align-right & {
+      right: 0;
+    }
+  }
+}

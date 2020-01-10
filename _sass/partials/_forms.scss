@@ -26,3 +26,8 @@ input[type="search"] {
 .required {
   color: red;
 }
+
+input,
+textarea {
+  color: $black;
+}

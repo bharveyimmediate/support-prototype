@@ -13,8 +13,29 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="http://localhost:4000/support-prototype/"><img class="masthead__logo" src="http://localhost:4000/support-prototype/img/gardeners-world-logo.png" width="600" height="240" /></a>
-        <h1 class="masthead__title"><a href="http://localhost:4000/support-prototype/">App Support</a></h1>
+        <a href="http://localhost:4000/support-prototype/"><img src="http://localhost:4000/support-prototype/img/logo_blue.gif" width="326" height="166" class="masthead__logo"></a>
+        <div class="accessibility-controls simple-reveal align-right">
+  <button class="btn btn-outline-primary simple-reveal__btn"><i class="fa fa-cog"></i> Accessibility</button>
+  <button class="btn btn-outline-primary simple-reveal__btn-close"><i class="fa fa-times"></i> Close</button>
+  <div class="simple-reveal__content accessibility-controls__content">
+    <h3>Accessibility</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="theme-selector" class="accessibility-controls__label-text">Text/background colour</label>
+        </div>
+        <div class="col">
+          <select class="form-control accessibility-controls__theme-selector" id="theme-selector">
+            <option value="default">Default</option>
+            <option value="blackyellow">Black text & yellow background</option>
+            <option value="blackcreme">Black text & creme background</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -25,11 +46,13 @@
 
     <main>
       <div class="container">
-  <a href="http://localhost:4000/support-prototype/" class="btn-back">Back</a>
-  <h2>Ownership</h2>
+        <div class="row">
+          <div class="col-12">
+            <h1 class="masthead__title">App Support</h1>
+            <a href="http://localhost:4000/support-prototype/" class="btn-back">Back</a>
+<h2>Ownership</h2>
 
-
-  <ul class="link-list">
+<ul class="link-list hide-dots">
 
   
 
@@ -45,23 +68,23 @@
 
   
     
-      <li class="link-list__item"><a href="#post-where-have-all-my-purchased-issues-gone">Where have all my purchased issues gone?</a></li>
+      <li class="link-list__item"><a href="#post-where-have-all-my-purchased-issues-gone"><i class="link-list__icon fa fa-question-circle"></i>Where have all my purchased issues gone?</a></li>
     
-      <li class="link-list__item"><a href="#post-i-m-missing-some-of-my-purchased-issues">I'm missing some of my purchased issues</a></li>
+      <li class="link-list__item"><a href="#post-i-m-missing-some-of-my-purchased-issues"><i class="link-list__icon fa fa-question-circle"></i>I'm missing some of my purchased issues</a></li>
     
-      <li class="link-list__item"><a href="#post-i-got-a-new-device-but-some-of-my-purchases-are-missing">I got a new device but some of my purchases are missing</a></li>
+      <li class="link-list__item"><a href="#post-i-got-a-new-device-but-some-of-my-purchases-are-missing"><i class="link-list__icon fa fa-question-circle"></i>I got a new device but some of my purchases are missing</a></li>
     
-      <li class="link-list__item"><a href="#post-i-can-see-my-issues-on-my-iphone-but-not-on-my-ipad">I can see my issues on my iPhone but not on my iPad</a></li>
+      <li class="link-list__item"><a href="#post-i-can-see-my-issues-on-my-iphone-but-not-on-my-ipad"><i class="link-list__icon fa fa-question-circle"></i>I can see my issues on my iPhone but not on my iPad</a></li>
     
-      <li class="link-list__item"><a href="#post-i-can-see-my-issues-on-my-ipad-but-not-on-my-iphone">I can see my issues on my iPad but not on my iPhone</a></li>
+      <li class="link-list__item"><a href="#post-i-can-see-my-issues-on-my-ipad-but-not-on-my-iphone"><i class="link-list__icon fa fa-question-circle"></i>I can see my issues on my iPad but not on my iPhone</a></li>
     
-      <li class="link-list__item"><a href="#post-how-do-i-restore-my-previous-purchases">How do I restore my previous purchases?</a></li>
+      <li class="link-list__item"><a href="#post-how-do-i-restore-my-previous-purchases"><i class="link-list__icon fa fa-question-circle"></i>How do I restore my previous purchases?</a></li>
     
   
 
 </ul>
 
-  
+
   
 
   
@@ -87,9 +110,9 @@
 </ol>
 
           <aside class="article-aside">
-  <h4>Already tried this?</h4>
-  <p>If you've tried this but you still require assistance, contact support using any of the options below.</p>
-  <ul class="link-list">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <ul class="link-list hide-dots no-stripes">
     <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
     <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="http://localhost:4000/support-prototype/submit-request.html">Submit a support request</a></li>
   </ul>
@@ -109,9 +132,9 @@
 </ol>
 
           <aside class="article-aside">
-  <h4>Already tried this?</h4>
-  <p>If you've tried this but you still require assistance, contact support using any of the options below.</p>
-  <ul class="link-list">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <ul class="link-list hide-dots no-stripes">
     <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
     <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="http://localhost:4000/support-prototype/submit-request.html">Submit a support request</a></li>
   </ul>
@@ -131,9 +154,9 @@
 </ol>
 
           <aside class="article-aside">
-  <h4>Already tried this?</h4>
-  <p>If you've tried this but you still require assistance, contact support using any of the options below.</p>
-  <ul class="link-list">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <ul class="link-list hide-dots no-stripes">
     <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
     <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="http://localhost:4000/support-prototype/submit-request.html">Submit a support request</a></li>
   </ul>
@@ -153,9 +176,9 @@
 </ol>
 
           <aside class="article-aside">
-  <h4>Already tried this?</h4>
-  <p>If you've tried this but you still require assistance, contact support using any of the options below.</p>
-  <ul class="link-list">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <ul class="link-list hide-dots no-stripes">
     <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
     <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="http://localhost:4000/support-prototype/submit-request.html">Submit a support request</a></li>
   </ul>
@@ -175,9 +198,9 @@
 </ol>
 
           <aside class="article-aside">
-  <h4>Already tried this?</h4>
-  <p>If you've tried this but you still require assistance, contact support using any of the options below.</p>
-  <ul class="link-list">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <ul class="link-list hide-dots no-stripes">
     <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
     <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="http://localhost:4000/support-prototype/submit-request.html">Submit a support request</a></li>
   </ul>
@@ -197,9 +220,9 @@
 </ol>
 
           <aside class="article-aside">
-  <h4>Already tried this?</h4>
-  <p>If you've tried this but you still require assistance, contact support using any of the options below.</p>
-  <ul class="link-list">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <ul class="link-list hide-dots no-stripes">
     <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
     <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="http://localhost:4000/support-prototype/submit-request.html">Submit a support request</a></li>
   </ul>
@@ -212,8 +235,9 @@
 
 
 
-</div>
-
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="site-footer">
   <div class="container">
@@ -231,21 +255,14 @@
 </footer>
 
 
+    <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>
