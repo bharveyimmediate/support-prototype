@@ -2,7 +2,7 @@
 layout: post
 title: How do I restore my previous purchases?
 popular: false
-categories: [ownership, subscriptions]
+categories: [subscriptions, singleissues, promotions]
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 

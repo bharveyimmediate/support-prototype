@@ -59,6 +59,8 @@ img { width: 100%; height: auto; }
 
 .grid__item a { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center; }
 
+@media screen and (min-width: 768px) { .grid__item-content { margin-left: 10px; margin-right: 10px; } }
+
 .col-md-2 .btn-search { width: 100%; }
 
 .search-results { padding-top: 1rem; }

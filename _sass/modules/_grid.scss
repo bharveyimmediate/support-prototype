@@ -44,5 +44,9 @@
 
   &__item-content {
 
+    @media screen and (min-width: $width-tablet) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 }
