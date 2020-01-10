@@ -75,15 +75,13 @@ input[type="text"] { outline: none; -webkit-appearance: none; }
 
 .article-full { padding-top: 50px; padding-bottom: 50px; }
 
-.link-list.no-stripes { padding-left: 20px; list-style-position: outside; }
-
 .link-list__item { margin-bottom: 0; }
 
 .hide-dots .link-list__item { list-style: none; }
 
 .link-list__item a { padding-top: 10px; padding-bottom: 10px; display: inline-block; }
 
-.link-list__icon { display: inline-block; margin-right: 5px; }
+.link-list__icon { display: inline-block; margin-right: 5px; color: #212529; }
 
 .link-list.hide-dots { padding-left: 0; }
 
