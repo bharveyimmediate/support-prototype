@@ -27,6 +27,7 @@ input[type="search"] {
   color: red;
 }
 
-input {
-  background-color: $creme !important;
+input,
+textarea {
+  color: $black;
 }

@@ -1,9 +1,21 @@
 .link-list {
 
+  &.no-stripes {
+    padding-left: 20px;
+    list-style-position: outside;
+  }
+
   &__item {
+    margin-bottom: 0;
 
     .hide-dots & {
       list-style: none;
+    }
+
+    a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: inline-block;
     }
   }
 

@@ -4,6 +4,7 @@
 $creme: #fffff6;
 $blue: #0354A0;
 $black: #212529;
+$yellow: #ffff00;
 
 $width-tablet: 768px;
 
@@ -21,6 +22,11 @@ $width-tablet: 768px;
 @import "modules/link-list";
 @import "modules/footer";
 @import "modules/masthead";
+@import "modules/accessibility";
+@import "modules/simple-reveal";
+
+@import "themes/blackyellow";
+@import "themes/blackcreme";
 
 body {
   font-size: 18px;

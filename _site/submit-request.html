@@ -14,6 +14,28 @@
     <div class="row">
       <div class="col-12">
         <a href="http://localhost:4000/support-prototype/"><img src="http://localhost:4000/support-prototype/img/logo_blue.gif" width="326" height="166" class="masthead__logo"></a>
+        <div class="accessibility-controls simple-reveal align-right">
+  <button class="btn btn-outline-primary simple-reveal__btn"><i class="fa fa-cog"></i> Accessibility</button>
+  <button class="btn btn-outline-primary simple-reveal__btn-close"><i class="fa fa-times"></i> Close</button>
+  <div class="simple-reveal__content accessibility-controls__content">
+    <h3>Accessibility</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="theme-selector" class="accessibility-controls__label-text">Text/background colour</label>
+        </div>
+        <div class="col">
+          <select class="form-control accessibility-controls__theme-selector" id="theme-selector">
+            <option value="default">Default</option>
+            <option value="blackyellow">Black text & yellow background</option>
+            <option value="blackcreme">Black text & creme background</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -120,21 +142,14 @@
 </footer>
 
 
+    <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>

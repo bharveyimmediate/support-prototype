@@ -22,21 +22,14 @@
     </main>
     {% include footer.html %}
 
+    <script src="{{ "/js/cookie.js" | absolute_url }}"></script>
+    <script src="{{ "/js/accessibility.js" | absolute_url }}"></script>
+    <script src="{{ "/js/simple-reveal.js" | absolute_url }}"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>
