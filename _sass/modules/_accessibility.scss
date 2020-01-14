@@ -4,7 +4,38 @@
   .masthead & {
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 0;
+    z-index: 1;
+
+    @media screen and (min-width: $width-tablet) {
+      top: 20px;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 10px;
+    right: 48px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    padding: 0;
+    color: $blue;
+
+    @media screen and (min-width: $width-tablet) {
+      position: static;
+      width: auto;
+      top: auto;
+      padding: 6px 12px;
+      border: 1px solid $blue;
+    }
+
+    .fa {
+
+      @media screen and (min-width: $width-tablet) {
+        margin-right: 5px;
+      }
+    }
   }
 
   &__content {
@@ -12,7 +43,7 @@
     padding: 12px 15px;
     width: 100vw;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $width-tablet) {
       width: 70vw;
     }
 
