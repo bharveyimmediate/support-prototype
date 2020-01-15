@@ -8,6 +8,10 @@
   border-color: #7c0852;
 }
 
+.btn-primary i {
+  color: #fff;
+}
+
 .btn-outline-primary {
   border-color: #7c0852;
   color: #7c0852;

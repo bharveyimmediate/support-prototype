@@ -1,0 +1,16 @@
+.col-2-buttons {
+  padding-left: 0;
+  padding-right: 0;
+
+  .col-md {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $width-tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

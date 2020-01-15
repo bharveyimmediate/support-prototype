@@ -151,6 +151,14 @@ input[type="text"] { outline: none; -webkit-appearance: none; }
 
 .align-right .simple-reveal__content { right: 0; }
 
+.col-2-buttons { padding-left: 0; padding-right: 0; }
+
+.col-2-buttons .col-md { margin-bottom: 10px; }
+
+@media screen and (min-width: 768px) { .col-2-buttons .col-md { margin-bottom: 0; } }
+
+.col-2-buttons .btn { width: 100%; }
+
 .theme-blackyellow { background-color: #ffff00; color: #000; }
 
 .theme-blackyellow textarea, .theme-blackyellow input { background-color: #ffff00; }

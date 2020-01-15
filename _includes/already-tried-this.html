@@ -1,8 +1,18 @@
 <aside class="article-aside">
   <h3>Already tried this?</h3>
   <p>If you are still experiencing the problem, contact support using any of the options below.</p>
-  <ul class="link-list hide-dots no-stripes">
-    <li class="link-list__item"><i class="fa fa-phone link-list__icon" aria-hidden="true"></i> <a href="#">Call 0800 123 4567</a></li>
-    <li class="link-list__item"><i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> <a href="{{ "/submit-request.html" | absolute_url }}">Submit a support request</a></li>
-  </ul>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="{{ "/submit-request.html" | absolute_url }}" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
 </aside>
