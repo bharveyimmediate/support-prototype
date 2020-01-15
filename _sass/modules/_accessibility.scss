@@ -1,5 +1,20 @@
 .accessibility-controls {
-  text-align: left;
+  text-align: right;
+
+  &.show {
+    border: 3px solid $black;
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: $creme;
+
+    @media screen and (min-width: $width-tablet) {
+      margin-top: -13px;
+      margin-right: -13px;
+      padding-top: 10px;
+      padding-right: 10px;
+      width: 70vw;
+    }
+  }
 
   .masthead & {
     position: absolute;
@@ -39,13 +54,8 @@
   }
 
   &__content {
-    background-color: $creme;
     padding: 12px 15px;
-    width: 100vw;
-
-    @media screen and (min-width: $width-tablet) {
-      width: 70vw;
-    }
+    text-align: left;
 
     .container {
       padding-left: 0;

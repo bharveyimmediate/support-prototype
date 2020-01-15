@@ -117,7 +117,11 @@ input[type="text"] { outline: none; -webkit-appearance: none; }
 
 @media screen and (min-width: 768px) { .masthead__title { margin-bottom: 2rem; } }
 
-.accessibility-controls { text-align: left; }
+.accessibility-controls { text-align: right; }
+
+.accessibility-controls.show { border: 3px solid #212529; box-sizing: border-box; width: 100vw; background-color: #fffff6; }
+
+@media screen and (min-width: 768px) { .accessibility-controls.show { margin-top: -13px; margin-right: -13px; padding-top: 10px; padding-right: 10px; width: 70vw; } }
 
 .masthead .accessibility-controls { position: absolute; right: 0; top: 0; z-index: 1; }
 
@@ -129,13 +133,13 @@ input[type="text"] { outline: none; -webkit-appearance: none; }
 
 @media screen and (min-width: 768px) { .accessibility-controls__toggle .fa { margin-right: 5px; } }
 
-.accessibility-controls__content { background-color: #fffff6; padding: 12px 15px; width: 100vw; }
-
-@media screen and (min-width: 768px) { .accessibility-controls__content { width: 70vw; } }
+.accessibility-controls__content { padding: 12px 15px; text-align: left; }
 
 .accessibility-controls__content .container { padding-left: 0; padding-right: 0; }
 
 .accessibility-controls__label-text { white-space: nowrap; }
+
+@media screen and (max-width: 767px) { .simple-reveal.show.sticky-mobile { position: fixed; } }
 
 .show .simple-reveal__btn { display: none; }
 
@@ -143,11 +147,15 @@ input[type="text"] { outline: none; -webkit-appearance: none; }
 
 @media screen and (min-width: 768px) { .simple-reveal__btn-close { right: 0; } }
 
-.show .simple-reveal__btn-close { display: block; }
+.show .simple-reveal__btn-close { position: absolute; right: 0; top: 0; display: block; }
 
-.simple-reveal__content { display: none; position: absolute; }
+@media screen and (min-width: 768px) { .show .simple-reveal__btn-close { display: inline-block; position: static; } }
 
-.show .simple-reveal__content { display: block; }
+.simple-reveal__content { display: none; }
+
+.show .simple-reveal__content { display: block; padding-top: 44px; }
+
+@media screen and (min-width: 768px) { .show .simple-reveal__content { padding-top: 24px; } }
 
 .align-right .simple-reveal__content { right: 0; }
 
