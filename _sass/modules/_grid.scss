@@ -55,9 +55,20 @@
     display: none;
 
     @media screen and (min-width: $width-tablet) {
-      display: block;
-      font-size: 50px;
+      display: flex;
+      height: 50%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i {
+      font-size: 88px;
       color: $black;
+    }
+
+    svg {
+      flex: 1;
+      height: 100%;
     }
   }
 }

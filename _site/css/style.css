@@ -63,7 +63,11 @@ img { width: 100%; height: auto; }
 
 .grid__item-icon { display: none; }
 
-@media screen and (min-width: 768px) { .grid__item-icon { display: block; font-size: 50px; color: #212529; } }
+@media screen and (min-width: 768px) { .grid__item-icon { display: flex; height: 50%; justify-content: center; align-items: center; } }
+
+.grid__item-icon i { font-size: 88px; color: #212529; }
+
+.grid__item-icon svg { flex: 1; height: 100%; }
 
 .col-md-2 .btn-search { width: 100%; }
 
