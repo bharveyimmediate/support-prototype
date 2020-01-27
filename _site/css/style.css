@@ -19,6 +19,9 @@
     margin-left: 0;
     margin-right: 0; } }
 
+.nojs .nojs-hide {
+  display: none; }
+
 form {
   margin-bottom: 30px; }
   .container form {

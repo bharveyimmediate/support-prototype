@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="nojs">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/style.css">
     <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/brand-gardeners-world.css">
+    <script>var htmlClasses = document.getElementsByTagName('html')[0].classList;htmlClasses.remove('nojs');htmlClasses.add('js');</script>
   </head>
   <body class="ios">
     <header class="masthead">
@@ -105,7 +106,11 @@
 </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/session.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/http-request.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/support-query-data-handler.js"></script>
     <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
     <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script src="http://localhost:4000/support-prototype/js/branding.js"></script>
@@ -114,6 +119,7 @@
     const baseurl = '/support-prototype';
 
     Accessibility.init();
+    SupportQueryDataHandler.storeDeviceData();
     Branding.apply();
 
     </script>
