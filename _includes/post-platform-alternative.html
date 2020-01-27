@@ -1,0 +1,15 @@
+{% for post in site.posts %}
+  {% if post.id == page.alt_platform_post %}
+
+    {% if page.platform == 'ios' %}
+    <div class="alert alert-info">
+      <strong>Note:</strong> this article refers to the <i class="fa fa-apple"></i> iOS version of the app. <a href="{{ post.url | absolute_url }}">Switch to the <i class="fa fa-android"></i> Android version</a>
+    </div>
+    {% elsif page.platform == 'android' %}
+    <div class="alert alert-info">
+      <strong>Note:</strong> this article refers to the <i class="fa fa-android"></i> Android version of the app. <a href="{{ post.url | absolute_url }}">Switch to the <i class="fa fa-apple"></i> iOS version</a>
+    </div>
+    {% endif %}
+
+  {% endif %}
+{% endfor %}
