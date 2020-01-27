@@ -15,7 +15,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="http://localhost:4000/support-prototype/"><img src="http://localhost:4000/support-prototype/img/bbc-gardeners-world-logo-blk.png" width="326" height="166" class="masthead__logo"></a>
+        <a href="http://localhost:4000/support-prototype/"><img v-bind:src="getLogoURL()" height="80" class="masthead__logo"></a>
         <div class="accessibility-controls simple-reveal align-right sticky-mobile">
   <button class="btn btn-outline-primary simple-reveal__btn accessibility-controls__toggle"><i class="fa fa-cog"></i><span class="tablet-and-up">Accessibility</span></button>
   <button class="btn btn-outline-primary simple-reveal__btn-close accessibility-controls__toggle"><i class="fa fa-times"></i><span class="tablet-and-up">Close accessibility</span></button>
@@ -82,14 +82,27 @@
 </footer>
 
 
+    
+    <script>
+  window.brandLogos = {};
+
+  
+    window.brandLogos['default'] = 'http://localhost:4000/support-prototype/img/logo_blue.gif';
+  
+    window.brandLogos['gw'] = 'http://localhost:4000/support-prototype/img/bbc-gardeners-world-logo-blk.png';
+  
+</script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/cookie.js"></script>
     <script src="http://localhost:4000/support-prototype/js/libs/session.js"></script>
     <script src="http://localhost:4000/support-prototype/js/libs/http-request.js"></script>
     <script src="http://localhost:4000/support-prototype/js/support-query-data-handler.js"></script>
     <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
     <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script src="http://localhost:4000/support-prototype/js/branding.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/components/masthead.js"></script>
     <script>
 
     const baseurl = '/support-prototype';
@@ -97,7 +110,10 @@
     Accessibility.init();
     SupportQueryDataHandler.storeDeviceData();
     Branding.apply();
+    Masthead.render();
 
     </script>
+
+
   </body>
 </html>

@@ -1,9 +1,14 @@
 var Branding = {
 
-  apply: function() {
+  getCurrent: function() {
 
     // read the branding value from the cookie
-    var brand = Cookie.read('brand');
+    return Cookie.read('brand');
+  },
+
+  apply: function() {
+
+    var brand = Branding.getCurrent();
 
     // if the cookie doesn't exist, bail
     if (!brand) {

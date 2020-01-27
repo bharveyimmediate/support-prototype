@@ -1,18 +1,18 @@
-.btn-primary {
+.brand-gw .btn-primary {
   background-color: #ac006d;
   border-color: #ac006d;
 }
 
-.btn-primary:hover {
+.brand-gw .btn-primary:hover {
   background-color: #7c0852;
   border-color: #7c0852;
 }
 
-.btn-primary i {
+.brand-gw .btn-primary i {
   color: #fff;
 }
 
-.btn-outline-primary {
+.brand-gw .btn-outline-primary {
   border-color: #7c0852;
   color: #7c0852;
 }

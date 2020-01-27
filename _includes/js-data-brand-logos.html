@@ -1,0 +1,7 @@
+<script>
+  window.brandLogos = {};
+
+  {% for logo in site.data.logos %}
+    window.brandLogos['{{logo.brand}}'] = '{{logo.url | absolute_url }}';
+  {% endfor %}
+</script>

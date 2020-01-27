@@ -3,12 +3,12 @@
 
   &__logo {
     display: block;
-    width: 80px;
-    height: auto;
+    width: auto;
+    height: 32px;
     margin: 20px 0;
 
     @media screen and (min-width: $width-tablet) {
-      width: 200px;
+      height: 80px;
       margin: 20px auto;
     }
   }

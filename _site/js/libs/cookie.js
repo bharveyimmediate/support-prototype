@@ -4,11 +4,14 @@ Cookie = {
 
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
-    if (parts.length == 2) return parts.pop().split(";").shift();
+    return parts.length == 2 ? parts.pop().split(";").shift() : null;
   },
 
   write: function(key, value) {
-    document.cookie = "" + key + "=" + value + ";path=/";
+
+    if (value !== null) {
+      document.cookie = "" + key + "=" + value + ";path=/";
+    }
   },
 
 };

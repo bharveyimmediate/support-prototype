@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="{{ "/" | absolute_url }}"><img src="{{ "/img/bbc-gardeners-world-logo-blk.png" | absolute_url }}" width="326" height="166" class="masthead__logo"></a>
+        <a href="{{ "/" | absolute_url }}"><img v-bind:src="getLogoURL()" height="80" class="masthead__logo"></a>
         {% include accessibility-controls.html %}
       </div>
     </div>
