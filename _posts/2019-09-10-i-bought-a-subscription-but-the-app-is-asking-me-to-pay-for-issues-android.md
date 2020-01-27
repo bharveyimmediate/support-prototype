@@ -1,10 +1,11 @@
 ---
 layout: post
-title: I bought a single issue but the app is asking me to pay for it
+title: I bought a subscription but the app is asking me to pay for my issue(s)
 popular: false
-categories: [singleissues]
+categories: [subscriptions]
 popular: false
-platform: iOS
+platform: android
+alt_platform_post: /subscriptions/2019/09/10/i-bought-a-subscription-but-the-app-is-asking-me-to-pay-for-issues-ios
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 

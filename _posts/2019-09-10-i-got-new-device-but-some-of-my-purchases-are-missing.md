@@ -3,6 +3,7 @@ layout: post
 title: I got a new device but some of my purchases are missing
 popular: false
 categories: [subscriptions, singleissues, promotions]
+platform: iOS
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 

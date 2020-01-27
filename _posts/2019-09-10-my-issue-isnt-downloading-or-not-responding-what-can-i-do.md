@@ -3,6 +3,7 @@ layout: post
 title: My issue isn't downloading or is not responding, what can I do?
 popular: false
 categories: [subscriptions, singleissues, promotions]
+platform: iOS
 ---
 To remove an issue from your device follow these steps:
 

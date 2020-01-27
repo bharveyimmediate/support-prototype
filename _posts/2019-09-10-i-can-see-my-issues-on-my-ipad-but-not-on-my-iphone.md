@@ -3,6 +3,7 @@ layout: post
 title: I can see my issues on my iPad but not on my iPhone
 popular: false
 categories: [subscriptions, singleissues, promotions]
+platform: iOS
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 
