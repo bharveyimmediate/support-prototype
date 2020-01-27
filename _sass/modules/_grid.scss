@@ -20,7 +20,7 @@
     padding-top: 2.5rem;
     margin-bottom: 1rem;
     position: relative;
-    border: 3px solid $blue;
+    border: 3px solid $black;
     border-radius: 10px;
 
     @media screen and (min-width: $width-tablet) {
@@ -36,13 +36,43 @@
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-evenly;
+      align-items: stretch;
       text-align: center;
+      flex-direction: column;
     }
   }
 
   &__item-content {
 
+    @media screen and (min-width: $width-tablet) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &__item-icon {
+    display: none;
+
+    @media screen and (min-width: $width-tablet) {
+      display: flex;
+      height: 50%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i {
+      font-size: 88px;
+      color: $black;
+    }
+
+    svg {
+      flex: 1;
+      height: 100%;
+    }
+
+    &--singleissue {
+      height: 45%;
+    }
   }
 }

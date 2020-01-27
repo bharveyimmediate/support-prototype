@@ -1,29 +1,35 @@
 <div class="component">
-  <h2>Browse by category</h2>
+  <h2>I need help with...</h2>
   <ul class="grid">
     <li class="grid__item"><a href="{{ "/category/subscriptions" | absolute_url }}">
-      <span class="grid__item-content">Subscriptions & purchases</span>
+      <div class="grid__item-icon">
+        {% include svgs/subs.svg %}
+      </div>
+      <span class="grid__item-content">My subscription</span>
     </a></li>
-    <!-- <li class="grid__item"><a href="{{ "/category/ownership" | absolute_url }}">
-      <span class="grid__item-content">Ownership</span>
-    </a></li> -->
-    <li class="grid__item"><a href="{{ "/category/generalappusage" | absolute_url }} ">
-      <span class="grid__item-content">General app usage</span>
+    <li class="grid__item"><a href="{{ "/category/singleissues" | absolute_url }} ">
+      <div class="grid__item-icon grid__item-icon--singleissue">
+        {% include svgs/single-issue.svg %}
+      </div>
+      <span class="grid__item-content">A single issue I purchased</span>
     </a></li>
-    <!-- <li class="grid__item"><a href="{{ "/category/account" | absolute_url }}">
-      <span class="grid__item-content">Account</span>
-    </a></li> -->
-    <!-- <li class="grid__item"><a href="{{ "/category/refunds" | absolute_url }}">
-      <span class="grid__item-content">Refunds</span>
-    </a></li> -->
     <li class="grid__item"><a href="{{ "/category/promotions" | absolute_url }}">
-      <span class="grid__item-content">Promotions & special offers</span>
-    </a></li>
-    <li class="grid__item"><a href="{{ "/category/issuecontent" | absolute_url }}">
-      <span class="grid__item-content">Issue content</span>
+      <div class="grid__item-icon">
+        {% include svgs/deal.svg %}
+      </div>
+      <span class="grid__item-content">A deal I purchased</span>
     </a></li>
     <li class="grid__item"><a href="{{ "/category/other" | absolute_url }}">
-      <span class="grid__item-content">Other</span>
+      <div class="grid__item-icon">
+        {% include svgs/other.svg %}
+      </div>
+      <span class="grid__item-content">Something else</span>
+    </a></li>
+    <li class="grid__item"><a href="{{ "/category/subscriptionquestions" | absolute_url }}">
+      <div class="grid__item-icon">
+        <i class="fa fa-question"></i>
+      </div>
+      <span class="grid__item-content">I have a question about subscriptions</span>
     </a></li>
   </ul>
 </div>

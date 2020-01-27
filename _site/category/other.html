@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="http://localhost:4000/support-prototype/js/libs/cookie.js"></script>
-    <script src="http://localhost:4000/support-prototype/js/libs/session.js"></script>
-    <script src="http://localhost:4000/support-prototype/js/libs/http-request.js"></script>
-    <script src="http://localhost:4000/support-prototype/js/support-query-data-handler.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/override-gardeners-world.css">
     <script>var htmlClasses = document.getElementsByTagName('html')[0].classList;htmlClasses.remove('nojs');htmlClasses.add('js');</script>
   </head>
   <body class="ios">
@@ -19,8 +15,28 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="http://localhost:4000/support-prototype/"><img class="masthead__logo" src="http://localhost:4000/support-prototype/img/gardeners-world-logo.png" width="600" height="240" /></a>
-        <h1 class="masthead__title"><a href="http://localhost:4000/support-prototype/">Support</a></h1>
+        <a href="http://localhost:4000/support-prototype/"><img src="http://localhost:4000/support-prototype/img/bbc-gardeners-world-logo-blk.png" width="326" height="166" class="masthead__logo"></a>
+        <div class="accessibility-controls simple-reveal align-right sticky-mobile">
+  <button class="btn btn-outline-primary simple-reveal__btn accessibility-controls__toggle"><i class="fa fa-cog"></i><span class="tablet-and-up">Accessibility</span></button>
+  <button class="btn btn-outline-primary simple-reveal__btn-close accessibility-controls__toggle"><i class="fa fa-times"></i><span class="tablet-and-up">Close accessibility</span></button>
+  <div class="simple-reveal__content accessibility-controls__content">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="theme-selector" class="accessibility-controls__label-text">Text/background colour</label>
+        </div>
+        <div class="col mx-md-n3">
+          <select class="form-control accessibility-controls__theme-selector" id="theme-selector">
+            <option value="default">Default</option>
+            <option value="blackyellow">Black text & yellow background</option>
+            <option value="blackcreme">Black text & creme background</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -31,12 +47,34 @@
 
     <main>
       <div class="container">
-  <a href="http://localhost:4000/support-prototype/" class="btn-back">Back</a>
-  <h2>Other</h2>
+        <div class="row">
+          <div class="col-12">
+            <h1 class="masthead__title">App Support</h1>
+            <a href="http://localhost:4000/support-prototype/" class="btn-back">Back</a>
+<h2>Other</h2>
 
+<ul class="link-list hide-dots use-icons">
 
-  <ul class="link-list">
-
+  
+    
+      <li class="link-list__item"><a href="#post-if-i-delete-an-issue-from-my-device-how-do-i-get-it-back"><i class="link-list__icon fa fa-question-circle"></i>If I delete an issue from my device, how do I get it back?</a></li>
+    
+      <li class="link-list__item"><a href="#post-i-forgot-my-password"><i class="link-list__icon fa fa-question-circle"></i>I forgot my password</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-do-i-get-the-cover-gift"><i class="link-list__icon fa fa-question-circle"></i>How do I get the cover gift?</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-do-i-archive-or-delete-an-issue-from-my-device"><i class="link-list__icon fa fa-question-circle"></i>How do I archive or delete an issue from my device?</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-can-i-download-the-issue-to-use-outside-of-the-app"><i class="link-list__icon fa fa-question-circle"></i>How can I download the issue to use outside of the app?</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-can-i-download-the-issue-to-send-to-a-friend"><i class="link-list__icon fa fa-question-circle"></i>How can I download the issue to send to a friend?</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-can-i-download-the-issue-to-save-in-my-archive"><i class="link-list__icon fa fa-question-circle"></i>How can I download the issue to save in my archive?</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-can-i-download-a-pattern-or-chart"><i class="link-list__icon fa fa-question-circle"></i>How can I download a pattern or chart?</a></li>
+    
+      <li class="link-list__item"><a href="#post-all-some-of-the-pages-are-blurry"><i class="link-list__icon fa fa-question-circle"></i>All / Some of the pages are blurry</a></li>
+    
   
 
   
@@ -49,21 +87,267 @@
 
 </ul>
 
-  
-  
 
   
+    
+      <article id="post-if-i-delete-an-issue-from-my-device-how-do-i-get-it-back" class="article-full">
+          <h3>If I delete an issue from my device, how do I get it back?</h3>
+          <p>You can always download any issues you already own, they will be available to you forever. All you need to do is tap the cloud icon.</p>
 
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-i-forgot-my-password" class="article-full">
+          <h3>I forgot my password</h3>
+          <p>To reset your Apple ID password go to <a href="https://iforgot.apple.com/password/verify/appleid">https://iforgot.apple.com/password/verify/appleid</a></p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-how-do-i-get-the-cover-gift" class="article-full">
+          <h3>How do I get the cover gift?</h3>
+          <p>As you might expect, cover gifts and other free items that come with the print edition aren’t included with the digital edition. In general, we don’t offer a way to get cover gifts but, if we do, instructions will be added in the digital edition</p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-how-do-i-archive-or-delete-an-issue-from-my-device" class="article-full">
+          <h3>How do I archive or delete an issue from my device?</h3>
+          <p>To remove an issue from your device follow these steps:</p>
+
+<ol>
+  <li>Open the app menu and tap “Downloaded Issues”</li>
+  <li>In the Downloaded Issues screen, tap “Edit” in the top right corner</li>
+  <li>Select the issue(s) you want to archive by tapping the small circle to the left of the cover image</li>
+  <li>Tap Remove” in the bottom right corner</li>
+</ol>
+
+<p>You can always download any issues you already own, they will be available to you forever.</p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-how-can-i-download-the-issue-to-use-outside-of-the-app" class="article-full">
+          <h3>How can I download the issue to use outside of the app?</h3>
+          <p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-how-can-i-download-the-issue-to-send-to-a-friend" class="article-full">
+          <h3>How can I download the issue to send to a friend?</h3>
+          <p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-how-can-i-download-the-issue-to-save-in-my-archive" class="article-full">
+          <h3>How can I download the issue to save in my archive?</h3>
+          <p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-how-can-i-download-a-pattern-or-chart" class="article-full">
+          <h3>How can I download a pattern or chart?</h3>
+          <p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
+      <article id="post-all-some-of-the-pages-are-blurry" class="article-full">
+          <h3>All / Some of the pages are blurry</h3>
+          <p>Unfortunately, sometimes files can get corrupted during download. When this happens, removing the issue and downloading it again will resolve the problem. Please see <a href="/support-prototype/2019-09-10-how-do-i-archive-or-delete-an-issue-from-my-device">“How do I archive or delete an issue from my device?”</a></p>
+
+          <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone link-list__icon" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
+      </div>
+      <div class="col-md">
+        <a href="http://localhost:4000/support-prototype/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope link-list__icon" aria-hidden="true"></i> Submit a support request
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      </article>
+      <hr />
+    
   
 
   
 
   
 
+  
+
+  
 
 
-</div>
 
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="site-footer">
   <div class="container">
@@ -81,21 +365,18 @@
 </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/session.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/http-request.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/support-query-data-handler.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>

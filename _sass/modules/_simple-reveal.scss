@@ -1,0 +1,57 @@
+.simple-reveal {
+
+  &.show {
+
+    &.sticky-mobile {
+      @media screen and (max-width: $width-tablet - 1) {
+        position: fixed;
+      }
+    }
+  }
+
+  &__btn {
+
+    .show & {
+      display: none;
+    }
+  }
+
+  &__btn-close {
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-width: $width-tablet) {
+      right: 0;
+    }
+
+    .show & {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+
+      @media screen and (min-width: $width-tablet) {
+        display: inline-block;
+        position: static;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    .show & {
+      display: block;
+      padding-top: 44px;
+
+      @media screen and (min-width: $width-tablet) {
+        padding-top: 24px;
+      }
+    }
+
+    .align-right & {
+      right: 0;
+    }
+  }
+}

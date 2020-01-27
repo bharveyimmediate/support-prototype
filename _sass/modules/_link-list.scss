@@ -1,12 +1,37 @@
 .link-list {
-  padding-left: 0;
 
   &__item {
-    list-style: none;
+    margin-bottom: 0;
+
+    .hide-dots & {
+      list-style: none;
+    }
+
+    a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: inline-block;
+
+      .use-icons & {
+        padding-left: 23px;
+        position: relative;
+      }
+    }
   }
 
   &__icon {
     display: inline-block;
     margin-right: 5px;
+    color: $black;
+
+    .use-icons & {
+      position: absolute;
+      left: 0;
+      top: 15px;
+    }
+  }
+
+  &.hide-dots {
+    padding-left: 0;
   }
 }

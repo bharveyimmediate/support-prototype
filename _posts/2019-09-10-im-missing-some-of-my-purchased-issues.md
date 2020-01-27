@@ -2,7 +2,7 @@
 layout: post
 title: I'm missing some of my purchased issues
 popular: false
-categories: [ownership, subscriptions]
+categories: [subscriptions, singleissues, promotions]
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 

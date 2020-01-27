@@ -7,35 +7,35 @@
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absolute_url }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ "css/style.css" | absolute_url }}">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="{{ "/js/libs/cookie.js" | absolute_url }}"></script>
-    <script src="{{ "/js/libs/session.js" | absolute_url }}"></script>
-    <script src="{{ "/js/libs/http-request.js" | absolute_url }}"></script>
-    <script src="{{ "/js/support-query-data-handler.js" | absolute_url }}"></script>
+    <link rel="stylesheet" href="{{ "css/override-gardeners-world.css" | absolute_url }}">
     <script>var htmlClasses = document.getElementsByTagName('html')[0].classList;htmlClasses.remove('nojs');htmlClasses.add('js');</script>
   </head>
   <body class="ios">
     {% include masthead.html %}
     <main>
-      {{ content }}
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="masthead__title">App Support</h1>
+            {{ content }}
+          </div>
+        </div>
+      </div>
     </main>
     {% include footer.html %}
 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="{{ "/js/cookie.js" | absolute_url }}"></script>
+    <script src="{{ "/js/libs/session.js" | absolute_url }}"></script>
+    <script src="{{ "/js/libs/http-request.js" | absolute_url }}"></script>
+    <script src="{{ "/js/support-query-data-handler.js" | absolute_url }}"></script>
+    <script src="{{ "/js/accessibility.js" | absolute_url }}"></script>
+    <script src="{{ "/js/simple-reveal.js" | absolute_url }}"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>

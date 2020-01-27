@@ -3,4 +3,9 @@
   @media screen and (max-width: $width-tablet - 1) {
     width: 100%;
   }
+
+  &-primary {
+    background-color: $blue;
+    border-color: $blue;
+  }
 }

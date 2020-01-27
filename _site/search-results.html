@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="http://localhost:4000/support-prototype/js/libs/cookie.js"></script>
-    <script src="http://localhost:4000/support-prototype/js/libs/session.js"></script>
-    <script src="http://localhost:4000/support-prototype/js/libs/http-request.js"></script>
-    <script src="http://localhost:4000/support-prototype/js/support-query-data-handler.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/support-prototype/css/override-gardeners-world.css">
     <script>var htmlClasses = document.getElementsByTagName('html')[0].classList;htmlClasses.remove('nojs');htmlClasses.add('js');</script>
   </head>
   <body class="ios">
@@ -19,8 +15,28 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <a href="http://localhost:4000/support-prototype/"><img class="masthead__logo" src="http://localhost:4000/support-prototype/img/gardeners-world-logo.png" width="600" height="240" /></a>
-        <h1 class="masthead__title"><a href="http://localhost:4000/support-prototype/">Support</a></h1>
+        <a href="http://localhost:4000/support-prototype/"><img src="http://localhost:4000/support-prototype/img/bbc-gardeners-world-logo-blk.png" width="326" height="166" class="masthead__logo"></a>
+        <div class="accessibility-controls simple-reveal align-right sticky-mobile">
+  <button class="btn btn-outline-primary simple-reveal__btn accessibility-controls__toggle"><i class="fa fa-cog"></i><span class="tablet-and-up">Accessibility</span></button>
+  <button class="btn btn-outline-primary simple-reveal__btn-close accessibility-controls__toggle"><i class="fa fa-times"></i><span class="tablet-and-up">Close accessibility</span></button>
+  <div class="simple-reveal__content accessibility-controls__content">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="theme-selector" class="accessibility-controls__label-text">Text/background colour</label>
+        </div>
+        <div class="col mx-md-n3">
+          <select class="form-control accessibility-controls__theme-selector" id="theme-selector">
+            <option value="default">Default</option>
+            <option value="blackyellow">Black text & yellow background</option>
+            <option value="blackcreme">Black text & creme background</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -31,6 +47,10 @@
 
     <main>
       <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="masthead__title">App Support</h1>
+            <div class="container">
   <div class="row">
     <div class="col-12">
       <h2>Search results</h2>
@@ -73,7 +93,7 @@
         title: `Will I be charged twice if I delete or lose an issue and want to get it again?`,
         content: `<p>No. Any previous purchases you have made will be recorded in your purchase history. Please see “How do I restore my previous purchases”.</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/will-i-be-charged-twice-if-i-delete-or-lose-an-issue-and-want-to-get-it-again.html`,
+        url: `http://localhost:4000/support-prototype/singleissues/2019/09/10/will-i-be-charged-twice-if-i-delete-or-lose-an-issue-and-want-to-get-it-again.html`,
         popular: false,
       },
 
@@ -89,7 +109,7 @@
   <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
 </ol>
 `,
-        url: `http://localhost:4000/support-prototype/ownership/subscriptions/2019/09/10/where-have-all-my-purchased-issues-gone.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/where-have-all-my-purchased-issues-gone.html`,
         popular: false,
       },
 
@@ -99,7 +119,7 @@
         title: `When my digital subscription expires, do I keep the issues?`,
         content: `<p>Yes, you own the issues for as long as you hold the account with Apple and use the associated Apple ID</p>
 `,
-        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/when-my-digital-subscription-expires-do-i-keep-the-issues.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/subscriptionquestions/2019/09/10/when-my-digital-subscription-expires-do-i-keep-the-issues.html`,
         popular: false,
       },
 
@@ -109,7 +129,7 @@
         title: `When does my subscription renew?`,
         content: `<p>You can view your Apple subscriptions via your account. For more information please visit https://support.apple.com/en-gb/HT202039</p>
 `,
-        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/when-does-my-subscription-renew.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/subscriptionquestions/2019/09/10/when-does-my-subscription-renew.html`,
         popular: false,
       },
 
@@ -117,11 +137,11 @@
 
       {
         title: `The latest issue hasn't appeared in the app`,
-        content: `<p>The app needs to be open and connected to the internet to receive the latest data and new isues, If you think there should be a new issue that you can’t see, you can try refreshing the app by pulling down anywhere on the screen.</p>
+        content: `<p>The app needs to be open and connected to the internet to receive the latest data and new issues, If you think there should be a new issue that you can’t see, you can try refreshing the app by pulling down anywhere on the screen.</p>
 
 <p>If you are sure that the app isn’t showing the latest issue, there may be a problem caused by some corrupted data. You should try deleting and reinstalling the app.</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/the-latest-issue-hasnt-appeared-in-the-app.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/the-latest-issue-hasnt-appeared-in-the-app.html`,
         popular: false,
       },
 
@@ -140,7 +160,7 @@
 
 <p>You can always download any issues you already own, they will be available to you forever.</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/my-issue-isnt-downloading-or-not-responding-what-can-i-do.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/my-issue-isnt-downloading-or-not-responding-what-can-i-do.html`,
         popular: false,
       },
 
@@ -156,7 +176,7 @@
   <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
 </ol>
 `,
-        url: `http://localhost:4000/support-prototype/ownership/subscriptions/2019/09/10/im-missing-some-of-my-purchased-issues.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/im-missing-some-of-my-purchased-issues.html`,
         popular: false,
       },
 
@@ -166,7 +186,7 @@
         title: `If I delete an issue from my device, how do I get it back?`,
         content: `<p>You can always download any issues you already own, they will be available to you forever. All you need to do is tap the cloud icon.</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/if-i-delete-an-issue-from-my-device-how-do-i-get-it-back.html`,
+        url: `http://localhost:4000/support-prototype/other/2019/09/10/if-i-delete-an-issue-from-my-device-how-do-i-get-it-back.html`,
         popular: false,
       },
 
@@ -216,7 +236,7 @@
   <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
 </ol>
 `,
-        url: `http://localhost:4000/support-prototype/ownership/subscriptions/2019/09/10/i-got-new-device-but-some-of-my-purchases-are-missing.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/i-got-new-device-but-some-of-my-purchases-are-missing.html`,
         popular: false,
       },
 
@@ -226,7 +246,7 @@
         title: `I forgot my password`,
         content: `<p>To reset your Apple ID password go to <a href="https://iforgot.apple.com/password/verify/appleid">https://iforgot.apple.com/password/verify/appleid</a></p>
 `,
-        url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-forgot-my-password.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/other/2019/09/10/i-forgot-my-password.html`,
         popular: true,
       },
 
@@ -254,7 +274,7 @@
   <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
 </ol>
 `,
-        url: `http://localhost:4000/support-prototype/ownership/subscriptions/2019/09/10/i-can-see-my-issues-on-my-iphone-but-not-my-ipad.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/i-can-see-my-issues-on-my-iphone-but-not-my-ipad.html`,
         popular: false,
       },
 
@@ -270,7 +290,7 @@
   <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
 </ol>
 `,
-        url: `http://localhost:4000/support-prototype/ownership/subscriptions/2019/09/10/i-can-see-my-issues-on-my-ipad-but-not-on-my-iphone.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/i-can-see-my-issues-on-my-ipad-but-not-on-my-iphone.html`,
         popular: false,
       },
 
@@ -280,14 +300,46 @@
         title: `I bought a subscription but the app is asking me to pay for my issue(s)`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h3 id="what-you-need-to-do">What you need to do</h3>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/support-prototype/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/support-prototype/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/support-prototype/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
         url: `http://localhost:4000/support-prototype/subscriptions/2019/09/10/i-bought-a-subscription-but-the-app-is-asking-me-to-pay-for-issues.html`,
         popular: true,
+      },
+
+    
+
+      {
+        title: `I bought a single issue but the app is asking me to pay for it`,
+        content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
+
+<h3 id="what-you-need-to-do">What you need to do</h3>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/support-prototype/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/support-prototype/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/support-prototype/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
+`,
+        url: `http://localhost:4000/support-prototype/singleissues/2019/09/10/i-bought-a-single-issue-but-the-app-is-asking-me-to-pay-for-it.html`,
+        popular: false,
       },
 
     
@@ -312,7 +364,7 @@
   <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
 </ol>
 `,
-        url: `http://localhost:4000/support-prototype/ownership/subscriptions/2019/09/10/how-do-i-restore-my-previous-purchases.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/how-do-i-restore-my-previous-purchases.html`,
         popular: false,
       },
 
@@ -332,7 +384,7 @@
         title: `How do I get the cover gift?`,
         content: `<p>As you might expect, cover gifts and other free items that come with the print edition aren’t included with the digital edition. In general, we don’t offer a way to get cover gifts but, if we do, instructions will be added in the digital edition</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-do-i-get-the-cover-gift.html`,
+        url: `http://localhost:4000/support-prototype/other/subscriptionquestions/2019/09/10/how-do-i-get-the-cover-gift.html`,
         popular: true,
       },
 
@@ -351,7 +403,7 @@
 
 <p>You can always download any issues you already own, they will be available to you forever.</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-do-i-archive-or-delete-an-issue-from-my-device.html`,
+        url: `http://localhost:4000/support-prototype/other/2019/09/10/how-do-i-archive-or-delete-an-issue-from-my-device.html`,
         popular: false,
       },
 
@@ -361,7 +413,7 @@
         title: `How can I download the issue to use outside of the app?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-can-i-download-the-issue-to-use-outside-of-the-app.html`,
+        url: `http://localhost:4000/support-prototype/other/2019/09/10/how-can-i-download-the-issue-to-use-outside-of-the-app.html`,
         popular: false,
       },
 
@@ -371,7 +423,7 @@
         title: `How can I download the issue to send to a friend?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-can-i-download-the-issue-to-send-to-a-friend.html`,
+        url: `http://localhost:4000/support-prototype/other/2019/09/10/how-can-i-download-the-issue-to-send-to-a-friend.html`,
         popular: false,
       },
 
@@ -381,7 +433,7 @@
         title: `How can I download the issue to save in my archive?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-can-i-download-the-issue-to-save-in-my-archive.html`,
+        url: `http://localhost:4000/support-prototype/singleissues/other/2019/09/10/how-can-i-download-the-issue-to-save-in-my-archive.html`,
         popular: false,
       },
 
@@ -391,7 +443,7 @@
         title: `How can I download a pattern or chart?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/support-prototype/generalappusage/2019/09/10/how-can-i-download-a-pattern-or-chart.html`,
+        url: `http://localhost:4000/support-prototype/other/2019/09/10/how-can-i-download-a-pattern-or-chart.html`,
         popular: false,
       },
 
@@ -401,7 +453,7 @@
         title: `How can I claim a refund if I'm not happy with something I've purchased?`,
         content: `<p>For transactions made through the App Store (In App Purchases) we are not able to issue refunds. For information on how to claim a refund from Apple please visit https://support.apple.com/en-gb/HT204088</p>
 `,
-        url: `http://localhost:4000/support-prototype/refunds/subscriptions/2019/09/10/how-can-i-claim-a-refund-if-im-not-happy-with-something-ive-purchased.html`,
+        url: `http://localhost:4000/support-prototype/subscriptions/singleissues/promotions/2019/09/10/how-can-i-claim-a-refund-if-im-not-happy-with-something-ive-purchased.html`,
         popular: false,
       },
 
@@ -411,7 +463,7 @@
         title: `All / Some of the pages are blurry`,
         content: `<p>Unfortunately, sometimes files can get corrupted during download. When this happens, removing the issue and downloading it again will resolve the problem. Please see <a href="/support-prototype/2019-09-10-how-do-i-archive-or-delete-an-issue-from-my-device">“How do I archive or delete an issue from my device?”</a></p>
 `,
-        url: `http://localhost:4000/support-prototype/magazinecontent/2019/09/10/all-some-of-the-pages-are-blurry.html`,
+        url: `http://localhost:4000/support-prototype/other/2019/09/10/all-some-of-the-pages-are-blurry.html`,
         popular: false,
       },
 
@@ -421,6 +473,9 @@
 </script>
 <script src="http://localhost:4000/support-prototype/js/components/search.js"></script>
 
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="site-footer">
   <div class="container">
@@ -438,21 +493,18 @@
 </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="http://localhost:4000/support-prototype/js/cookie.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/session.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/libs/http-request.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/support-query-data-handler.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/accessibility.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/simple-reveal.js"></script>
     <script>
 
     const baseurl = '/support-prototype';
 
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register(baseurl + '/service-worker.js').then(function(registration) {
-    //       // Registration was successful
-    //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //     }, function(err) {
-    //       // registration failed :(
-    //       console.log('ServiceWorker registration failed: ', err);
-    //     });
-    //   });
-    // }
+    Accessibility.init();
 
     </script>
   </body>
