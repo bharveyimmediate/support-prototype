@@ -18,6 +18,7 @@ SupportQueryDataHandler = {
       subscriptionstatus: urlParams.get('subscriptionstatus'),
       subscriberid: urlParams.get('subscriberid'),
       purchasemethod: urlParams.get('purchasemethod'),
+      brand: urlParams.get('brand'),
     });
 
     // save the session data

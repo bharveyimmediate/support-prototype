@@ -10,6 +10,7 @@ function Session(opts) {
   this.subscriptionstatus = opts.subscriptionstatus || null;
   this.subscriberid = opts.subscriberid || null;
   this.purchasemethod = opts.purchasemethod || null;
+  this.brand = opts.brand || null;
 }
 
 Session.prototype.allowedParams = [
@@ -19,6 +20,7 @@ Session.prototype.allowedParams = [
   'subscriptionstatus',
   'subscriberid',
   'purchasemethod',
+  'brand',
 ];
 
 Session.prototype.save = function() {
