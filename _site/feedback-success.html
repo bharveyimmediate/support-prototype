@@ -109,6 +109,7 @@
     <script src="http://localhost:4000/support-prototype/js/modules/branding.js"></script>
     <script src="http://localhost:4000/support-prototype/js/modules/session.js"></script>
     <script src="http://localhost:4000/support-prototype/js/modules/accessibility.js"></script>
+    <script src="http://localhost:4000/support-prototype/js/modules/support-form.js"></script>
 
     <script>
 
@@ -120,8 +121,7 @@
     // fetch the parameters passed via URL
     var urlParams = new URLSearchParams(window.location.search);
 
-    // instantiate a new session
-    var sesh = new Session({
+    var newSessionData = {
       platform: urlParams.get('platform'),
       device: urlParams.get('device'),
       appversion: urlParams.get('appversion'),
@@ -129,13 +129,11 @@
       subscriberid: urlParams.get('subscriberid'),
       purchasemethod: urlParams.get('purchasemethod'),
       brand: urlParams.get('brand'),
-    });
+      osversion: urlParams.get('osversion'),
+    };
 
-    // sync to retrieve existing values stored by the session module
-    sesh.sync();
-
-    // save the session data
-    sesh.save();
+    // instantiate a new session
+    new Session(newSessionData);
 
     </script>
 

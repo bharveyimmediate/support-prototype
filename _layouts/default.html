@@ -40,6 +40,7 @@
     <script src="{{ "/js/modules/branding.js" | absolute_url }}"></script>
     <script src="{{ "/js/modules/session.js" | absolute_url }}"></script>
     <script src="{{ "/js/modules/accessibility.js" | absolute_url }}"></script>
+    <script src="{{ "/js/modules/support-form.js" | absolute_url }}"></script>
 
     <script>
 
@@ -51,8 +52,7 @@
     // fetch the parameters passed via URL
     var urlParams = new URLSearchParams(window.location.search);
 
-    // instantiate a new session
-    var sesh = new Session({
+    var newSessionData = {
       platform: urlParams.get('platform'),
       device: urlParams.get('device'),
       appversion: urlParams.get('appversion'),
@@ -60,13 +60,11 @@
       subscriberid: urlParams.get('subscriberid'),
       purchasemethod: urlParams.get('purchasemethod'),
       brand: urlParams.get('brand'),
-    });
+      osversion: urlParams.get('osversion'),
+    };
 
-    // sync to retrieve existing values stored by the session module
-    sesh.sync();
-
-    // save the session data
-    sesh.save();
+    // instantiate a new session
+    new Session(newSessionData);
 
     </script>
 

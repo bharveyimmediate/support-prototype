@@ -2,420 +2,212 @@
 layout: default
 title: Submit a support request
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h2>Submit a support request</h2>
-      <p>If you've been unable to find an answer to your question, please fill in this form and a member of the support team can assist you.</p>
-      <div class="alert alert-warning" role="alert">
-        <strong>Note:</strong> it can take up to 48 hours to receive a response.
-      </div>
-    </div>
-    <noscript>
-      <form>
-        <div class="col-sm-6">
-          <fieldset>
-            <legend>Your details</legend>
-            <div class="form-group">
-              <label for="">Name<sup class="required">*</sup></label>
-              <input type="text" class="form-control" name="name" value="">
-            </div>
-            <div class="form-group">
-              <label for="">Email address<sup class="required">*</sup></label>
-              <input type="email" class="form-control" name="email" value="">
-            </div>
-          </fieldset>
-        </div>
-        <div class="col-sm-12">
-          <fieldset>
-            <legend>Your account and device info</legend>
-
-            <div class="alert alert-info">
-              This section is optional, but any information you are able to provide will help to resolve your issue more quickly
-            </div>
-
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td><label for="field-platform">Platform</label></td>
-                  <td>
-                    <select name="platform" class="form-control" id="field-platform">
-                      <option value="-1">Please select...</option>
-                      <option value="ios">iOS</option>
-                      <option value="android">Android</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="field-device">Device</label></td>
-                  <td><input type="text" class="form-control" name="device" id="field-device" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-osversion">OS version</label></td>
-                  <td><input type="text" class="form-control" name="osversion" id="field-osversion" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-appversion">App version</label></td>
-                  <td><input type="text" class="form-control" name="appversion" id="field-appversion" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-subscriptionstatus">Do you currently have a subscription?</label></td>
-                  <td>
-                    <select class="form-control" name="subscriptionstatus" id="field-subscriptionstatus">
-                      <option value="-1">Please select...</option>
-                      <option value="subscriber">Yes</option>
-                      <option value="nonsubscriber">No</option>
-                      <option value="notsure">Not sure</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="field-subscriberid">Subscriber no.</label></td>
-                  <td><input type="text" class="form-control" name="subscriberid" id="field-subscriberid" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-purchasemethod">Purchase method</label></td>
-                  <td>
-                    <select class="form-control" name="purchasemethod" id="field-purchasemethod">
-                      <option value="-1">Please select...</option>
-                      <option value="inapp">In-app purchase</option>
-                      <option value="buysubscriptions">Purchased on buysubscriptions.com</option>
-                    </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </fieldset>
-
-          <fieldset>
-            <legend>Your issue</legend>
-            <div class="form-group">
-              <label>Describe the problem<sup class="required">*</sup></label>
-              <textarea name="description" class="form-control"></textarea>
-            </div>
-          </fieldset>
-
-          <div class="align-right">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="sendcopy">
-              <label for="">Email a copy of this message to my inbox</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </div>
-        </div>
-      </form>
-    </noscript>
-
-    <div class="form-component nojs-hide">
-      <form action="http://dummy.restapiexample.com/api/v1/create" method="POST" v-on:submit.prevent="onSubmit">
-        <div class="col-sm-6">
-          <fieldset>
-            <legend>Your details</legend>
-            <div class="form-group">
-              <label for="field-name">Name<sup class="required">*</sup></label>
-              <input type="text" class="form-control" name="name" id="field-name" v-model="formValues.name" v-on:keyup="checkFieldValid">
-              <div v-if="validationErrorFieldNames.indexOf('name') > -1" class="alert alert-danger">
-                This field is required
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="field-email">Email address<sup class="required">*</sup></label>
-              <input type="email" class="form-control" name="email" id="field-email" v-model="formValues.email" v-on:keyup="checkFieldValid">
-              <div v-if="validationErrorFieldNames.indexOf('email') > -1" class="alert alert-danger">
-                This field is required and must be a valid email address
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="col-sm-12">
-          <fieldset>
-            <legend>Your account and device info</legend>
-
-            <div v-if="!devicedatacaptured" class="alert alert-info">
-              This section is optional, but any information you are able to provide will help to resolve your issue more quickly
-            </div>
-            <p v-else>We'll include this data from your device to enable us to assist with your query more quickly. Information about how we use this data can be found in our <a href="#" target="_blank">privacy policy</a>.</p>
-
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td><label for="field-platform">Platform</label></td>
-                  <td>
-                    <select name="platform" class="form-control" id="field-platform" v-model="formValues.platform">
-                      <option value="-1">Please select...</option>
-                      <option value="ios">iOS</option>
-                      <option value="android">Android</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="field-device">Device</label></td>
-                  <td><input type="text" class="form-control" name="device" id="field-device" v-model="formValues.device" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-osversion">OS version</label></td>
-                  <td><input type="text" class="form-control" name="osversion" id="field-osversion" v-model="formValues.osversion" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-appversion">App version</label></td>
-                  <td><input type="text" class="form-control" name="appversion" id="field-appversion" v-model="formValues.appversion" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-subscriptionstatus">Do you currently have a subscription?</label></td>
-                  <td>
-                    <select class="form-control" name="subscriptionstatus" id="field-subscriptionstatus" v-model="formValues.subscriptionstatus">
-                      <option value="-1">Please select...</option>
-                      <option value="subscriber">Yes</option>
-                      <option value="nonsubscriber">No</option>
-                      <option value="notsure">Not sure</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td><label for="field-subscriberid">Subscriber no.</label></td>
-                  <td><input type="text" class="form-control" name="subscriberid" id="field-subscriberid" v-model="formValues.subscriberid" /></td>
-                </tr>
-                <tr>
-                  <td><label for="field-purchasemethod">Purchase method</label></td>
-                  <td>
-                    <select class="form-control" name="purchasemethod" id="field-purchasemethod" v-model="formValues.purchasemethod">
-                      <option value="-1">Please select...</option>
-                      <option value="in-app">In-app purchase</option>
-                      <option value="buysubscriptions">Purchased on buysubscriptions.com</option>
-                    </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </fieldset>
-
-          <fieldset>
-            <legend>Your issue</legend>
-            <div class="form-group">
-              <label for="field-description">Describe the problem<sup class="required">*</sup></label>
-              <textarea name="description" class="form-control" id="field-description" v-model="formValues.description" v-on:keyup="checkFieldValid"></textarea>
-              <div v-if="validationErrorFieldNames.indexOf('description') > -1" class="alert alert-danger">
-                This field is required
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="align-right">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="field-sendcopy" v-model="formValues.sendcopy">
-              <label for="field-sendcopy">Email a copy of this message to my inbox</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+<h2>Submit a support request</h2>
+<p>If you've been unable to find an answer to your question, please fill in this form and a member of the support team can assist you.</p>
+<div class="alert alert-warning" role="alert">
+  <strong>Note:</strong> it can take up to 48 hours to receive a response.
 </div>
 
-<script>
+<noscript>
+  <form>
+    <div class="row no-gutters">
+      <div class="col-sm-6">
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-group">
+            <label for="">Name<sup class="required">*</sup></label>
+            <input type="text" class="form-control" name="name" value="">
+          </div>
+          <div class="form-group">
+            <label for="">Email address<sup class="required">*</sup></label>
+            <input type="email" class="form-control" name="email" value="">
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-sm-12">
+        <fieldset>
+          <legend>Your account and device info</legend>
 
-  /**
-   * Checks that a string is a valid email address
-   *
-   * @param  {String} email The value being tested
-   * @return {Boolean}
-   */
-  var isValidEmail = function(email) {
-    return typeof email === 'string' && email.length && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+          <div class="alert alert-info">
+            This section is optional, but any information you are able to provide will help to resolve your issue more quickly
+          </div>
 
-  /**
-   * Checks that a value is a string with more than one character
-   *
-   * @param  {String} text The value being tested
-   * @return {Boolean}
-   */
-  var isValidText = function(text) {
-    return typeof text === 'string' && text.length;
-  };
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><label for="field-platform">Platform</label></td>
+                <td>
+                  <select name="platform" class="form-control" id="field-platform">
+                    <option value="-1">Please select...</option>
+                    <option value="ios">iOS</option>
+                    <option value="android">Android</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="field-device">Device</label></td>
+                <td><input type="text" class="form-control" name="device" id="field-device" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-osversion">OS version</label></td>
+                <td><input type="text" class="form-control" name="osversion" id="field-osversion" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-appversion">App version</label></td>
+                <td><input type="text" class="form-control" name="appversion" id="field-appversion" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-subscriptionstatus">Do you currently have a subscription?</label></td>
+                <td>
+                  <select class="form-control" name="subscriptionstatus" id="field-subscriptionstatus">
+                    <option value="-1">Please select...</option>
+                    <option value="subscriber">Yes</option>
+                    <option value="nonsubscriber">No</option>
+                    <option value="notsure">Not sure</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="field-subscriberid">Subscriber no.</label></td>
+                <td><input type="text" class="form-control" name="subscriberid" id="field-subscriberid" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-purchasemethod">Purchase method</label></td>
+                <td>
+                  <select class="form-control" name="purchasemethod" id="field-purchasemethod">
+                    <option value="-1">Please select...</option>
+                    <option value="inapp">In-app purchase</option>
+                    <option value="buysubscriptions">Purchased on buysubscriptions.com</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
 
-  var form = new Vue({
-    el: '.form-component',
-    data: function() {
-      return {
-        devicedatacaptured: false,
-        validationErrorFieldNames: [],
-        formValues: {
-          name: '',
-          email: '',
-          platform: null,
-          device: null,
-          osversion: null,
-          appversion: null,
-          subscriptionstatus: null,
-          subscriberid: null,
-          purchasemethod: null,
-          description: '',
-          sendcopy: false,
-        }
-      }
-    },
-    methods: {
+        <fieldset>
+          <legend>Your issue</legend>
+          <div class="form-group">
+            <label>Describe the problem<sup class="required">*</sup></label>
+            <textarea name="description" class="form-control"></textarea>
+          </div>
+        </fieldset>
 
-      /**
-       * Validate the form to ensure required fields have suitable values
-       *
-       * @param  {Object} data Form field values as key -> value pairs
-       * @return {Object}      Property stating if form is valid (Boolean)
-       *                       Property with list of field names with errors (Array)
-       */
-      validate: function(formData) {
+        <div class="align-right">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="sendcopy">
+            <label for="">Email a copy of this message to my inbox</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</noscript>
 
-        var requiredFieldNames = ['name', 'email', 'description'];
-        var fieldNamesWithErrors = [];
+<div class="form-component nojs-hide">
+  <form action="http://dummy.restapiexample.com/api/v1/create" method="POST" v-on:submit.prevent="onSubmit">
+    <div class="row no-gutters">
+      <div class="col-sm-6">
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-group">
+            <label for="field-name">Name<sup class="required">*</sup></label>
+            <input type="text" class="form-control" name="name" id="field-name" v-model="formValues.name" v-on:keyup="checkFieldValid">
+            <div v-if="validationErrorFieldNames.indexOf('name') > -1" class="alert alert-danger">
+              This field is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="field-email">Email address<sup class="required">*</sup></label>
+            <input type="email" class="form-control" name="email" id="field-email" v-model="formValues.email" v-on:keyup="checkFieldValid">
+            <div v-if="validationErrorFieldNames.indexOf('email') > -1" class="alert alert-danger">
+              This field is required and must be a valid email address
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-sm-12">
+        <fieldset>
+          <legend>Your account and device info</legend>
 
-        if (!isValidText(formData.name)) {
-          fieldNamesWithErrors.push('name');
-        }
+          <div v-if="!devicedatacaptured" class="alert alert-info">
+            This section is optional, but any information you are able to provide will help to resolve your issue more quickly
+          </div>
+          <p v-else>We'll include this data from your device to enable us to assist with your query more quickly. Information about how we use this data can be found in our <a href="#" target="_blank">privacy policy</a>.</p>
 
-        if (!isValidEmail(formData.email)) {
-          fieldNamesWithErrors.push('email');
-        }
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><label for="field-platform">Platform</label></td>
+                <td>
+                  <select name="platform" class="form-control" id="field-platform" v-model="formValues.platform">
+                    <option value="-1">Please select...</option>
+                    <option value="ios">iOS</option>
+                    <option value="android">Android</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="field-device">Device</label></td>
+                <td><input type="text" class="form-control" name="device" id="field-device" v-model="formValues.device" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-osversion">OS version</label></td>
+                <td><input type="text" class="form-control" name="osversion" id="field-osversion" v-model="formValues.osversion" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-appversion">App version</label></td>
+                <td><input type="text" class="form-control" name="appversion" id="field-appversion" v-model="formValues.appversion" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-subscriptionstatus">Do you currently have a subscription?</label></td>
+                <td>
+                  <select class="form-control" name="subscriptionstatus" id="field-subscriptionstatus" v-model="formValues.subscriptionstatus">
+                    <option value="-1">Please select...</option>
+                    <option value="subscriber">Yes</option>
+                    <option value="nonsubscriber">No</option>
+                    <option value="notsure">Not sure</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="field-subscriberid">Subscriber no.</label></td>
+                <td><input type="text" class="form-control" name="subscriberid" id="field-subscriberid" v-model="formValues.subscriberid" /></td>
+              </tr>
+              <tr>
+                <td><label for="field-purchasemethod">Purchase method</label></td>
+                <td>
+                  <select class="form-control" name="purchasemethod" id="field-purchasemethod" v-model="formValues.purchasemethod">
+                    <option value="-1">Please select...</option>
+                    <option value="in-app">In-app purchase</option>
+                    <option value="buysubscriptions">Purchased on buysubscriptions.com</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
 
-        if (!isValidText(formData.description)) {
-          fieldNamesWithErrors.push('description');
-        }
+        <fieldset>
+          <legend>Your issue</legend>
+          <div class="form-group">
+            <label for="field-description">Describe the problem<sup class="required">*</sup></label>
+            <textarea name="description" class="form-control" id="field-description" v-model="formValues.description" v-on:keyup="checkFieldValid"></textarea>
+            <div v-if="validationErrorFieldNames.indexOf('description') > -1" class="alert alert-danger">
+              This field is required
+            </div>
+          </div>
+        </fieldset>
 
-        return {
-          isValid: !!!fieldNamesWithErrors.length,
-          fieldNamesWithErrors: fieldNamesWithErrors,
-        };
-      },
-
-      /**
-       * Tell the application that a field has failed validation
-       *
-       * @param  {String} fieldName The name property of the field
-       * @return {void}
-       */
-      validationFailField: function(fieldName) {
-
-        var index = this.validationErrorFieldNames.indexOf(fieldName);
-
-        if (index === -1) {
-          this.validationErrorFieldNames.push(fieldName);
-        }
-      },
-
-      /**
-       * Tell the application that a field has passed validation
-       *
-       * @param  {String} fieldName The name property of the field
-       * @return {void}
-       */
-      validationPassField: function(fieldName) {
-
-        var index = this.validationErrorFieldNames.indexOf(fieldName);
-
-        if (index > -1) {
-          this.validationErrorFieldNames.splice(index, 1);
-        }
-      },
-
-      /**
-       * Handle the form being submitted
-       *
-       * - Check the form is valid
-       * - Tell the application which fields have failed validation (if any)
-       * - Perform an AJAX request to submit the form data if validation passed
-       *
-       * @param  {Object} event Form submit event
-       * @return {void}
-       */
-      onSubmit: function(event) {
-
-        var formData = this._data.formValues;
-        var validation = this.validate(formData);
-        var that = this;
-
-        if (!validation.isValid) {
-
-          // show validation errors
-          validation.fieldNamesWithErrors.forEach(function(fieldName) {
-            that.validationFailField(fieldName);
-          });
-
-        } else {
-
-          // grab the target URL from the form
-          var actionURL = this.$el.querySelector('form').getAttribute('action');
-
-          console.log(actionURL);
-
-          // submit the form
-          new HttpRequest({
-            method: 'POST',
-            url: actionURL,
-            data: formData,
-          })
-          .then(function(response) {
-            console.log('form submitted successfully', response);
-          })
-          .catch(function(err) {
-            console.log('problem submitting the form', err);
-          });
-        }
-      },
-
-      /**
-       * Pass a field if it no longer fails validation
-       *
-       * @param  {Object} event Field keyup event
-       * @return {void}
-       */
-      checkFieldValid: function(event) {
-
-        var fieldName = event.target.name;
-        var fieldType = event.target.type;
-        var validationFieldWasFailing = this.validationErrorFieldNames.indexOf(fieldName) > -1;
-
-        // if this field is currently failing validation, check it again
-        if (validationFieldWasFailing) {
-
-          if ((fieldType === 'text' && isValidText(this.formValues[fieldName])) ||
-              (fieldType === 'email' && isValidEmail(this.formValues[fieldName])) ||
-              (fieldType === 'textarea' && isValidText(this.formValues[fieldName]))) {
-
-            // state that the field has passed validation
-            this.validationPassField(fieldName);
-          }
-        }
-      },
-    },
-
-    /**
-     * Vue component lifecycle method which is called when the component is created
-     *
-     * Fetches data captured from the device, if any is stored
-     *
-     * @return {void}
-     */
-    created: function() {
-
-      // check if device data has been captured in this session
-      var deviceData = SupportQueryDataHandler.fetchDeviceData();
-
-      if (deviceData) {
-
-        // if it has, set the data in this vue instance
-        this.formValues.platform = deviceData.platform;
-        this.formValues.device = deviceData.device;
-        this.formValues.osversion = deviceData.osversion;
-        this.formValues.appversion = deviceData.appversion;
-        this.formValues.subscriptionstatus = deviceData.subscriptionstatus;
-        this.formValues.subscriberid = deviceData.subscriberid;
-        this.formValues.purchasemethod = deviceData.purchasemethod;
-
-        // state that the user's device data has been captured
-        this.devicedatacaptured = true;
-      }
-    }
-  });
-
-</script>
+        <div class="align-right">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="field-sendcopy" v-model="formValues.sendcopy">
+            <label for="field-sendcopy">Email a copy of this message to my inbox</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

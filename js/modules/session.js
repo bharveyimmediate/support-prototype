@@ -12,13 +12,21 @@ function Session(opts) {
     opts = {};
   }
 
-  this.platform = opts.platform || null;
-  this.device = opts.device || null;
-  this.appversion = opts.appversion || null;
-  this.subscriptionstatus = opts.subscriptionstatus || null;
-  this.subscriberid = opts.subscriberid || null;
-  this.purchasemethod = opts.purchasemethod || null;
-  this.brand = opts.brand || null;
+  // fetch existing values stored earlier in the session
+  this.sync();
+
+  // update the session values with new data, if any new data is provided
+  this.platform = opts.platform || this.platform;
+  this.device = opts.device || this.device;
+  this.appversion = opts.appversion || this.appversion;
+  this.subscriptionstatus = opts.subscriptionstatus || this.subscriptionstatus;
+  this.subscriberid = opts.subscriberid || this.subscriberid;
+  this.purchasemethod = opts.purchasemethod || this.purchasemethod;
+  this.brand = opts.brand || this.brand;
+  this.osversion = opts.osversion || this.osversion;
+
+  // save the session data
+  this.save();
 }
 
 /**
@@ -36,6 +44,7 @@ Session.prototype.getData = function() {
     subscriberid: this.subscriberid,
     purchasemethod: this.purchasemethod,
     brand: this.brand,
+    osversion: this.osversion,
   }
 };
 
@@ -52,6 +61,7 @@ Session.prototype.allowedVariables = [
   'subscriberid',
   'purchasemethod',
   'brand',
+  'osversion',
 ];
 
 /**
@@ -91,7 +101,11 @@ Session.prototype.sync = function() {
   var that = this;
 
   this.allowedVariables.forEach(function(paramName) {
-    that[paramName] = Cookie.read(paramName);
+    var cookieValue = Cookie.read(paramName);
+
+    if (cookieValue !== null) {
+      that[paramName] = cookieValue;
+    }
   });
 
   Party.sendEvent('sessionsynced', this.getData());
