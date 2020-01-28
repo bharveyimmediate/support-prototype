@@ -25,8 +25,10 @@ var Branding = {
     document.body.classList.add('brand-' + brand);
 
     // swap out the masthead logo for the branded version
-    var mastheadLogo = document.querySelector('.masthead__logo');
-    mastheadLogo.src = window.brandLogos[brand];
+    if (brand in window.brandLogos) {
+      var mastheadLogo = document.querySelector('.masthead__logo');
+      mastheadLogo.src = window.brandLogos[brand];
+    }
   },
 
   /**
