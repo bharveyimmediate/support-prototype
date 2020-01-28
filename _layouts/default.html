@@ -27,23 +27,46 @@
     {% comment %}data in JS{% endcomment %}
     {% include js-data-brand-logos.html %}
 
+    {% comment %} Third-party libraries {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    {% comment %} Application libraries {% endcomment %}
+    <script src="{{ "/js/libs/party.js" | absolute_url }}"></script>
     <script src="{{ "/js/libs/cookie.js" | absolute_url }}"></script>
-    <script src="{{ "/js/libs/session.js" | absolute_url }}"></script>
     <script src="{{ "/js/libs/http-request.js" | absolute_url }}"></script>
-    <script src="{{ "/js/support-query-data-handler.js" | absolute_url }}"></script>
-    <script src="{{ "/js/accessibility.js" | absolute_url }}"></script>
-    <script src="{{ "/js/simple-reveal.js" | absolute_url }}"></script>
-    <script src="{{ "/js/branding.js" | absolute_url }}"></script>
-    <script src="{{ "/js/components/masthead.js" | absolute_url }}"></script>
+    <script src="{{ "/js/libs/simple-reveal.js" | absolute_url }}"></script>
+
+    {% comment %} Application modules {% endcomment %}
+    <script src="{{ "/js/modules/branding.js" | absolute_url }}"></script>
+    <script src="{{ "/js/modules/session.js" | absolute_url }}"></script>
+    <script src="{{ "/js/modules/accessibility.js" | absolute_url }}"></script>
+
     <script>
 
     const baseurl = '/support-prototype';
 
     Accessibility.init();
-    SupportQueryDataHandler.storeDeviceData();
-    Branding.apply();
-    Masthead.render();
+    Branding.init();
+
+    // fetch the parameters passed via URL
+    var urlParams = new URLSearchParams(window.location.search);
+
+    // instantiate a new session
+    var sesh = new Session({
+      platform: urlParams.get('platform'),
+      device: urlParams.get('device'),
+      appversion: urlParams.get('appversion'),
+      subscriptionstatus: urlParams.get('subscriptionstatus'),
+      subscriberid: urlParams.get('subscriberid'),
+      purchasemethod: urlParams.get('purchasemethod'),
+      brand: urlParams.get('brand'),
+    });
+
+    // sync to retrieve existing values stored by the session module
+    sesh.sync();
+
+    // save the session data
+    sesh.save();
 
     </script>
 

@@ -55,6 +55,6 @@ document.body.addEventListener('click', function(event) {
 
   // close the simple reveal components if you click away
   if (!parentIsSimpleReveal(event.target)) {
-      hideAll();
+    hideAll();
   }
 });

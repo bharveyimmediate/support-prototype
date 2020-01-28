@@ -81,6 +81,6 @@ Search.prototype.fetch = function(phrase) {
   this.Events.sendEvent('resultsfetched', results);
 };
 
-const urlParams = new URLSearchParams(window.location.search);
-const query = urlParams.get('query');
+var searchUrlParams = new URLSearchParams(window.location.search);
+const query = searchUrlParams.get('query');
 new Search(query);

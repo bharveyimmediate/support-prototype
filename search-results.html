@@ -2,38 +2,16 @@
 layout: default
 title: Search
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h2>Search results</h2>
+<h2>Search results</h2>
 
-      <h3>Showing results for: <em class="search-query"></em></h3>
+<h3>Showing results for: <em class="search-query"></em></h3>
 
-      <div class="search-results">
+<div class="search-results">
 
-      </div>
-
-      {% include search.html %}
-
-    </div>
-  </div>
 </div>
 
+{% include search.html %}
+
+{% include js-data-posts.html %}
 <script src="{{ "/js/libs/lunr.js" | absolute_url }}"></script>
-<script>
-
-  window.posts = [
-    {% for post in site.posts %}
-
-      {
-        title: `{{ post.title }}`,
-        content: `{{ post.content }}`,
-        url: `{{ post.url | absolute_url }}`,
-        popular: {{ post.popular }},
-      },
-
-    {% endfor %}
-  ];
-
-</script>
-<script src="{{ "/js/components/search.js" | absolute_url }}"></script>
+<script src="{{ "/js/modules/search.js" | absolute_url }}"></script>
