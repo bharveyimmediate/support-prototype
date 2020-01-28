@@ -330,7 +330,8 @@ input[type="text"] {
   color: #000; }
 
 .theme-blackyellow textarea,
-.theme-blackyellow input {
+.theme-blackyellow input,
+.theme-blackyellow select {
   background-color: #ffff00; }
 
 .theme-blackcreme {
@@ -338,7 +339,8 @@ input[type="text"] {
   color: #000; }
 
 .theme-blackcreme textarea,
-.theme-blackcreme input {
+.theme-blackcreme input,
+.theme-blackcreme select {
   background-color: #fffff6; }
 
 body {
