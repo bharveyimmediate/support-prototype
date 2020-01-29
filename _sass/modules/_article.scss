@@ -6,3 +6,7 @@
 .article-aside {
 
 }
+
+.single-article + .article-aside {
+  margin-bottom: 30px;
+}

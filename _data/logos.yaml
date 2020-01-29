@@ -1,11 +1,11 @@
 - brand: default
   url: "/img/logos/logo_blue.gif"
-- brand: gw
-  url: "/img/logos/bbc-gardeners-world-logo-blk.png"
 - brand: 220
   url: "/img/logos/220-triathlon-logo.svg"
 - brand: gf
   url: "/img/logos/bbc-good-food-logo.svg"
+- brand: gw
+  url: "/img/logos/bbc-gardeners-world-logo-blk.png"
 - brand: tg
   url: "/img/logos/bbc-top-gear-logo.svg"
 - brand: cap
