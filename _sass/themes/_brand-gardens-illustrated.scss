@@ -1,0 +1,21 @@
+.brand-gi {
+
+  .btn-primary {
+    background-color: #3b8126;
+    border-color: #3b8126;
+
+    &:hover {
+      background-color: #1d6408;
+      border-color: #1d6408;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #3b8126;
+    color: #3b8126;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

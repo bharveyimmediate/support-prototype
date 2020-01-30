@@ -1,0 +1,21 @@
+.brand-mu {
+
+  .btn-primary {
+    background-color: #235D6F;
+    border-color: #235D6F;
+
+    &:hover {
+      background-color: #9F1930;
+      border-color: #9F1930;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #235D6F;
+    color: #235D6F;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

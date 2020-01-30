@@ -1,0 +1,21 @@
+.brand-mbuk {
+
+  .btn-primary {
+    background-color: #1ba39c;
+    border-color: #1ba39c;
+
+    &:hover {
+      background-color: #007173;
+      border-color: #007173;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #1ba39c;
+    color: #1ba39c;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

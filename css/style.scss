@@ -26,8 +26,39 @@ $width-tablet: 768px;
 @import "modules/simple-reveal";
 @import "modules/col-2-buttons";
 
+// accessibility themes
 @import "themes/blackyellow";
 @import "themes/blackcreme";
+
+// brand themes
+@import "themes/brand-220-triathlon";
+@import "themes/brand-cardmaking-papercraft";
+@import "themes/brand-countryfile";
+@import "themes/brand-gardeners-world";
+@import "themes/brand-good-food";
+@import "themes/brand-top-gear";
+@import "themes/brand-cycling-plus";
+@import "themes/brand-cross-stitch-crazy";
+@import "themes/brand-science-focus";
+@import "themes/brand-gardens-illustrated";
+@import "themes/brand-homes-antiques";
+@import "themes/brand-bbc-history";
+@import "themes/brand-in-the-moment";
+@import "themes/brand-the-knitter";
+@import "themes/brand-lonely-planet";
+@import "themes/brand-love-patchwork-quilting";
+@import "themes/brand-mbuk";
+@import "themes/brand-mollie-makes";
+@import "themes/brand-bbc-music";
+@import "themes/brand-papercraft-inspirations";
+@import "themes/brand-radio-times";
+@import "themes/brand-simply-crochet";
+@import "themes/brand-simply-sewing";
+@import "themes/brand-simply-knitting";
+@import "themes/brand-sky-at-night";
+@import "themes/brand-who-do-you-think-you-are";
+@import "themes/brand-world-histories";
+@import "themes/brand-woxs";
 
 body {
   font-size: 18px;

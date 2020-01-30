@@ -1,0 +1,21 @@
+.brand-wdytya {
+
+  .btn-primary {
+    background-color: #4696CD;
+    border-color: #4696CD;
+
+    &:hover {
+      background-color: #ED1C24;
+      border-color: #ED1C24;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #4696CD;
+    color: #4696CD;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

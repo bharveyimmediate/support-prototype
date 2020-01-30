@@ -9,6 +9,21 @@
 var Branding = {
 
   /**
+   * Remove any branding-specific classes from the body tag
+   *
+   * @return {void}
+   */
+  clearBodyClasses: function() {
+    var bodyClasses = document.body.className.split(' ');
+    var regex = RegExp('^brand-');
+    for (var c = 0; c < bodyClasses.length; c += 1) {
+      if (regex.test(bodyClasses[c])) {
+        document.body.classList.remove(bodyClasses[c]);
+      }
+    }
+  },
+
+  /**
    * Apply the brand-specific changes to the application
    *
    * @param  {String} brand Identifier of the brand e.g. 'gw' for Gardeners' World
@@ -20,6 +35,9 @@ var Branding = {
     if (!brand) {
       return;
     }
+
+    // clear any previous branding classes from the body tag
+    Branding.clearBodyClasses();
 
     // add the body class for the brand
     document.body.classList.add('brand-' + brand);

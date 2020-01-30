@@ -1,0 +1,21 @@
+.brand-sc {
+
+  .btn-primary {
+    background-color: #c4392f;
+    border-color: #c4392f;
+
+    &:hover {
+      background-color: #8c0007;
+      border-color: #8c0007;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #c4392f;
+    color: #c4392f;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

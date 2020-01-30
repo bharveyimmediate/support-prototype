@@ -1,0 +1,21 @@
+.brand-sn {
+
+  .btn-primary {
+    background-color: #314181;
+    border-color: #314181;
+
+    &:hover {
+      background-color: #454444;
+      border-color: #454444;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #091959;
+    color: #091959;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

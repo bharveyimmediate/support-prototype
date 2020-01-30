@@ -1,0 +1,21 @@
+.brand-gf {
+
+  .btn-primary {
+    background-color: #be2a77;
+    border-color: #be2a77;
+
+    &:hover {
+      background-color: #7f1c50;
+      border-color: #7f1c50;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #be2a77;
+    color: #be2a77;
+  }
+
+  .site-footer {
+    background-color: #535048;
+  }
+}

@@ -1,0 +1,21 @@
+.brand-rt {
+
+  .btn-primary {
+    background-color: #02838f;
+    border-color: #02838f;
+
+    &:hover {
+      background-color: #01545c;
+      border-color: #01545c;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #02838f;
+    color: #02838f;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

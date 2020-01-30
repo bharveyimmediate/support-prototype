@@ -1,0 +1,21 @@
+.brand-mm {
+
+  .btn-primary {
+    background-color: #ec658b;
+    border-color: #ec658b;
+
+    &:hover {
+      background-color: #ec658b;
+      border-color: #ec658b;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #ec658b;
+    color: #ec658b;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

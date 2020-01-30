@@ -1,0 +1,23 @@
+.brand-220 {
+
+  .btn-primary {
+    background-color: #ff4330;
+    border-color: #ff4330;
+    opacity: 0.9;
+
+    &:hover {
+      background-color: #ff4330;
+      border-color: #ff4330;
+      opacity: 1;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #ff4330;
+    color: #ff4330;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

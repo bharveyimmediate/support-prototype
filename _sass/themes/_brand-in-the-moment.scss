@@ -1,0 +1,21 @@
+.brand-im {
+
+  .btn-primary {
+    background-color: #368187;
+    border-color: #368187;
+
+    &:hover {
+      background-color: #044f55;
+      border-color: #044f55;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: #368187;
+    color: #368187;
+  }
+
+  .site-footer {
+    background-color: #000;
+  }
+}

@@ -68,6 +68,8 @@ a {
 .btn-primary {
   background-color: #0354A0;
   border-color: #0354A0; }
+  .btn-primary i {
+    color: #fff; }
 
 @media screen and (max-width: 767px) {
   .table tbody td {
@@ -171,6 +173,9 @@ input[type="text"] {
   padding-top: 50px;
   padding-bottom: 50px; }
 
+.single-article + .article-aside {
+  margin-bottom: 30px; }
+
 .link-list__item {
   margin-bottom: 0; }
   .hide-dots .link-list__item {
@@ -210,11 +215,13 @@ input[type="text"] {
     display: block;
     width: auto;
     height: 32px;
-    margin: 20px 0; }
+    margin: 20px 0;
+    max-width: 180px; }
     @media screen and (min-width: 768px) {
       .masthead__logo {
         height: 80px;
-        margin: 20px auto; } }
+        margin: 20px auto;
+        max-width: 300px; } }
   .masthead__search {
     position: absolute;
     right: 4px;
@@ -342,6 +349,344 @@ input[type="text"] {
 .theme-blackcreme input,
 .theme-blackcreme select {
   background-color: #fffff6; }
+
+.brand-220 .btn-primary {
+  background-color: #ff4330;
+  border-color: #ff4330;
+  opacity: 0.9; }
+  .brand-220 .btn-primary:hover {
+    background-color: #ff4330;
+    border-color: #ff4330;
+    opacity: 1; }
+.brand-220 .btn-outline-primary {
+  border-color: #ff4330;
+  color: #ff4330; }
+.brand-220 .site-footer {
+  background-color: #000; }
+
+.brand-cap .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-cap .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-cap .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-cap .site-footer {
+  background-color: #000; }
+
+.brand-cf .btn-primary {
+  background-color: #d90714;
+  border-color: #d90714; }
+  .brand-cf .btn-primary:hover {
+    background-color: #b00;
+    border-color: #b00; }
+.brand-cf .btn-outline-primary {
+  border-color: #d90714;
+  color: #d90714; }
+.brand-cf .site-footer {
+  background-color: #333; }
+
+.brand-gw .btn-primary {
+  background-color: #ac006d;
+  border-color: #ac006d; }
+  .brand-gw .btn-primary:hover {
+    background-color: #7c0852;
+    border-color: #7c0852; }
+.brand-gw .btn-outline-primary {
+  border-color: #ac006d;
+  color: #ac006d; }
+.brand-gw .site-footer {
+  background-color: #333; }
+
+.brand-gf .btn-primary {
+  background-color: #be2a77;
+  border-color: #be2a77; }
+  .brand-gf .btn-primary:hover {
+    background-color: #7f1c50;
+    border-color: #7f1c50; }
+.brand-gf .btn-outline-primary {
+  border-color: #be2a77;
+  color: #be2a77; }
+.brand-gf .site-footer {
+  background-color: #535048; }
+
+.brand-tg .btn-primary {
+  background-color: #2b2b2b;
+  border-color: #2b2b2b; }
+  .brand-tg .btn-primary:hover {
+    background-color: #454444;
+    border-color: #454444; }
+.brand-tg .btn-outline-primary {
+  border-color: #2b2b2b;
+  color: #2b2b2b; }
+.brand-tg .site-footer {
+  background-color: #000; }
+
+.brand-cp .btn-primary {
+  background-color: #2b2b2b;
+  border-color: #2b2b2b; }
+  .brand-cp .btn-primary:hover {
+    background-color: #454444;
+    border-color: #454444; }
+.brand-cp .btn-outline-primary {
+  border-color: #2b2b2b;
+  color: #2b2b2b; }
+.brand-cp .site-footer {
+  background-color: #000; }
+
+.brand-cc .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-cc .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-cc .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-cc .site-footer {
+  background-color: #000; }
+
+.brand-sf .btn-primary {
+  background-color: #46609f;
+  border-color: #46609f; }
+  .brand-sf .btn-primary:hover {
+    background-color: #1e3877;
+    border-color: #1e3877; }
+.brand-sf .btn-outline-primary {
+  border-color: #46609f;
+  color: #46609f; }
+.brand-sf .site-footer {
+  background-color: #000; }
+
+.brand-gi .btn-primary {
+  background-color: #3b8126;
+  border-color: #3b8126; }
+  .brand-gi .btn-primary:hover {
+    background-color: #1d6408;
+    border-color: #1d6408; }
+.brand-gi .btn-outline-primary {
+  border-color: #3b8126;
+  color: #3b8126; }
+.brand-gi .site-footer {
+  background-color: #000; }
+
+.brand-ha .btn-primary {
+  background-color: #932b22;
+  border-color: #932b22; }
+  .brand-ha .btn-primary:hover {
+    background-color: #750d00;
+    border-color: #750d00; }
+.brand-ha .btn-outline-primary {
+  border-color: #932b22;
+  color: #932b22; }
+.brand-ha .site-footer {
+  background-color: #000; }
+
+.brand-hi .btn-primary {
+  background-color: #cc3d00;
+  border-color: #cc3d00; }
+  .brand-hi .btn-primary:hover {
+    background-color: #992e00;
+    border-color: #992e00; }
+.brand-hi .btn-outline-primary {
+  border-color: #cc3d00;
+  color: #cc3d00; }
+.brand-hi .site-footer {
+  background-color: #000; }
+
+.brand-im .btn-primary {
+  background-color: #368187;
+  border-color: #368187; }
+  .brand-im .btn-primary:hover {
+    background-color: #044f55;
+    border-color: #044f55; }
+.brand-im .btn-outline-primary {
+  border-color: #368187;
+  color: #368187; }
+.brand-im .site-footer {
+  background-color: #000; }
+
+.brand-tk .btn-primary {
+  background-color: #540534;
+  border-color: #540534; }
+  .brand-tk .btn-primary:hover {
+    background-color: #540534;
+    border-color: #540534; }
+.brand-tk .btn-outline-primary {
+  border-color: #540534;
+  color: #540534; }
+.brand-tk .site-footer {
+  background-color: #000; }
+
+.brand-lp .btn-primary {
+  background-color: #277bba;
+  border-color: #277bba; }
+  .brand-lp .btn-primary:hover {
+    background-color: #277bba;
+    border-color: #277bba; }
+.brand-lp .btn-outline-primary {
+  border-color: #277bba;
+  color: #277bba; }
+.brand-lp .site-footer {
+  background-color: #000; }
+
+.brand-lpq .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-lpq .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-lpq .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-lpq .site-footer {
+  background-color: #000; }
+
+.brand-mbuk .btn-primary {
+  background-color: #1ba39c;
+  border-color: #1ba39c; }
+  .brand-mbuk .btn-primary:hover {
+    background-color: #007173;
+    border-color: #007173; }
+.brand-mbuk .btn-outline-primary {
+  border-color: #1ba39c;
+  color: #1ba39c; }
+.brand-mbuk .site-footer {
+  background-color: #000; }
+
+.brand-mm .btn-primary {
+  background-color: #ec658b;
+  border-color: #ec658b; }
+  .brand-mm .btn-primary:hover {
+    background-color: #ec658b;
+    border-color: #ec658b; }
+.brand-mm .btn-outline-primary {
+  border-color: #ec658b;
+  color: #ec658b; }
+.brand-mm .site-footer {
+  background-color: #000; }
+
+.brand-mu .btn-primary {
+  background-color: #235D6F;
+  border-color: #235D6F; }
+  .brand-mu .btn-primary:hover {
+    background-color: #9F1930;
+    border-color: #9F1930; }
+.brand-mu .btn-outline-primary {
+  border-color: #235D6F;
+  color: #235D6F; }
+.brand-mu .site-footer {
+  background-color: #000; }
+
+.brand-pi .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-pi .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-pi .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-pi .site-footer {
+  background-color: #000; }
+
+.brand-rt .btn-primary {
+  background-color: #02838f;
+  border-color: #02838f; }
+  .brand-rt .btn-primary:hover {
+    background-color: #01545c;
+    border-color: #01545c; }
+.brand-rt .btn-outline-primary {
+  border-color: #02838f;
+  color: #02838f; }
+.brand-rt .site-footer {
+  background-color: #000; }
+
+.brand-sc .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-sc .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-sc .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-sc .site-footer {
+  background-color: #000; }
+
+.brand-ss .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-ss .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-ss .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-ss .site-footer {
+  background-color: #000; }
+
+.brand-sk .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-sk .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-sk .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-sk .site-footer {
+  background-color: #000; }
+
+.brand-sn .btn-primary {
+  background-color: #314181;
+  border-color: #314181; }
+  .brand-sn .btn-primary:hover {
+    background-color: #454444;
+    border-color: #454444; }
+.brand-sn .btn-outline-primary {
+  border-color: #091959;
+  color: #091959; }
+.brand-sn .site-footer {
+  background-color: #000; }
+
+.brand-wdytya .btn-primary {
+  background-color: #4696CD;
+  border-color: #4696CD; }
+  .brand-wdytya .btn-primary:hover {
+    background-color: #ED1C24;
+    border-color: #ED1C24; }
+.brand-wdytya .btn-outline-primary {
+  border-color: #4696CD;
+  color: #4696CD; }
+.brand-wdytya .site-footer {
+  background-color: #000; }
+
+.brand-wh .btn-primary {
+  background-color: #cc3d00;
+  border-color: #cc3d00; }
+  .brand-wh .btn-primary:hover {
+    background-color: #992e00;
+    border-color: #992e00; }
+.brand-wh .btn-outline-primary {
+  border-color: #cc3d00;
+  color: #cc3d00; }
+.brand-wh .site-footer {
+  background-color: #000; }
+
+.brand-woxs .btn-primary {
+  background-color: #c4392f;
+  border-color: #c4392f; }
+  .brand-woxs .btn-primary:hover {
+    background-color: #8c0007;
+    border-color: #8c0007; }
+.brand-woxs .btn-outline-primary {
+  border-color: #c4392f;
+  color: #c4392f; }
+.brand-woxs .site-footer {
+  background-color: #000; }
 
 body {
   font-size: 18px; }
